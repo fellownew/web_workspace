@@ -7,6 +7,6 @@
 <body>
 	안녕하세요...<br>
 	반갑습니다...
-	<a href="http://127.0.0.1:8088/Helloworld/helloServlet">-HelloServlet 요청</a>
+	<a>-HelloServlet 요청</a>
 </body>
 </html>
