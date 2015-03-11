@@ -1,0 +1,14 @@
+package web.hello;
+
+import javax.servlet.http.HttpServlet;
+
+public class HelloServlet extends HttpServlet{
+	
+	
+	
+	
+	public void doGet(){
+		
+	}
+
+}
