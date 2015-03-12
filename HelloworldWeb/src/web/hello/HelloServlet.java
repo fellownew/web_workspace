@@ -18,11 +18,11 @@ public class HelloServlet extends HttpServlet { //Servlet 이용을 위한 상�
 			throws ServletException, IOException { 
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter(); //response에서 Writer를 불러와 PrintWriter를 만듬.
-		out.println("HelloWorld<br>");
-		out.println("안녕하세요<br>");
-		out.println("반갑습니다<br>");
-		out.println("HelloServlet<br>");
-		out.println("잘 되나요?<br>");
+		out.println("HelloWorld<br/>");
+		out.println("안녕하세요<br/>");
+		out.println("반갑습니다<br/>");
+		out.println("HelloServlet<br/>");
+		out.println("잘 되나요?<br/>");
 		out.println("현재시간 : "+now);
 	}
 }

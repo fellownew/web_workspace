@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hello title</title>
+</head>
+<body>
+	<h3>어서오세요</h3><br/>
+	<a href="http://127.0.0.1:8088/HelloworldWeb/helloServlet"> HelloServlet 불러오기</a><br/>
+	<a href="http://127.0.0.1:8088/HelloworldWeb/introductionServlet">자기소개</a><br/>
+	<a href="http://www.naver.com">네이버 링크</a><br/>
+	<a href="http://www.daum.net">다음 링크</a><br/>
+</body>
+</html>

@@ -19,4 +19,13 @@
   <url-pattern>/helloServlet</url-pattern>  <!-- 접속 할 수 있는 URL 지정 --> 
   </servlet-mapping>
   
+  <servlet>
+  <servlet-name>introduction</servlet-name> 
+  <servlet-class>web.hello.IntroductionServlet</servlet-class>  <!-- 불러올 서블릿의 패키지 및 클래스 명 --> 
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>introduction</servlet-name>
+  <url-pattern>/introductionServlet</url-pattern>  <!-- 접속 할 수 있는 URL 지정 --> 
+  </servlet-mapping>
+  
 </web-app>
