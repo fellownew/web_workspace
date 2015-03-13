@@ -1,0 +1,19 @@
+package servlet.basic;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class CounterServlet extends HttpServlet{
+	private int couter; // 요청자의 counter 값 ( 몇번째 요청한 것인지)를 지정할 변수.
+	
+	//client의 요청을 처리하는 메소드 - 요청방식 - GET:doGet(), POST : doPost()
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+		
+		
+		
+	}
+}
