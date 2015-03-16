@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="/myweb/login" method="post">
+
+<table>
+	<tr>
+		<th colspan="2">로그인</th>
+	</tr>
+	<tr>
+		<td><input type="text" name="id" size="30" maxlength="20" placeholder="ID"></td>
+		<td rowspan="2"><input type="image" src="/myweb/images/loginimg.jpg" width="100"></td>
+	</tr>
+	<tr>
+		<td><input type="password" name="password" size="31" placeholder="비밀번호"></td>
+	</tr>
+	<tr>
+		<td><a href="www.naver.com">회원가입</a></td>
+		<td><a href="www.daum.net">비밀번호 찾기</a></td>
+		<td></td>
+	</tr>
+</table>
+</form>
+</body>
+</html>

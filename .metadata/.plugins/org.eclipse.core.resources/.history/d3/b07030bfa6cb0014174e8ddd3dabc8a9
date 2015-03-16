@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>각종 입력 양식</h2><!-- h1,h2~h6 글씨체 제목형식으로... 크기지정 태그(1big ~ 6small), 자동br -->
+<!-- form은입력 양식들을 묶어주는 역할을 함. -->
+<form action="/myweb/FormRequestServlet" method="post">
+이　　름 : <input type="text" name="name" size="30" maxlength="20" placeholder="이름을 써주세요" autofocus="autofocus" required="required"><br/>
+비밀번호 : <input type="password" name="password" size="30" placeholder="패스워드" required="required"><br/>
+나　　이 : <input type="number" name="age" min="18" max="120" placeholder="숫자만 입력해주세요"><br/>
+이　메일 : <input type="email" name="email" placeholder="이메일 주소"><br/>
+성　　별 : <input type="radio" name="sex" value="male" id="m"><label for ="m"> male</label>
+<input type="radio" name="sex" value="female" id="f"><label for="f">female</label><br/>
+<!--  id속성은 태그의 식별값을 지정함. -->
+관심있는 언어를 모두 선택하세요 : 
+<label><input type="checkbox" name="language" value="java" checked="checked">JAVA</label>
+<label><input type="checkbox" name="language" value="c">C</label>
+<label><input type="checkbox" name="language" value="cpp">C++</label>
+<label><input type="checkbox" name="language" value="cs">C#</label>
+<label><input type="checkbox" name="language" value="python">Python</label>
+<label><input type="checkbox" name="language" value="ruby">Ruby</label>
+<br/>
+<label>광고메일 수신 받겠습니까?<input type="checkbox" name="adv" value="yes"></label><br/>
+<input type="hidden" name="command" value="register" checked="checked">
+사진을 넣으세요.<input type="file" name="picture"><p/>
+
+전화번호 : <select name="phone1">
+<option>010</option>
+<option>011</option>
+<option>016</option>
+<option>019</option>
+</select>
+<p/>
+
+
+<br/><input type="submit" value="가입">  <input type="reset" value="초기화"><br/> <!-- value는 버튼의 라벨, 
+사용자가 클릭하면 form의 action에 지정된 URL로 입력된 모든 값들을 가지고 이동함. -->
+<input type="button" value="그냥 버튼" onclick="alert('ALERT!')"><br/>
+<input type="image" src="/myweb/images/buttonimg.jpg" onclick="alert('시스템을 종료합니다.')">
+</form>
+</body>
+</html>

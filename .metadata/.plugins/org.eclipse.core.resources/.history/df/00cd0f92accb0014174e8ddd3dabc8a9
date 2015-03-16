@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>로그인</h2>
+<form action="/myweb/login">
+<input type="text" name="id" size="30" maxlength="20" placeholder="ID"><br/>
+<input type="password" name="password" size="30" placeholder="비밀번호">
+<input type="image" src="/myweb/images/loginimg.jpg" width="100">
+</form>
+</body>
+</html>
