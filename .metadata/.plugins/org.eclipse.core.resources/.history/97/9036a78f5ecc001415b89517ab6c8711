@@ -1,0 +1,16 @@
+package servlet.form;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class CalculateServlet extends HttpServlet{
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response){
+		
+		int num1 = request.getParameter("num1");
+		int num2 = request.getParameter("num2");
+		
+	}
+	
+}

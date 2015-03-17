@@ -1,0 +1,27 @@
+package servlet.form;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class CalculateServlet extends HttpServlet{
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response){
+		
+		int num1 = Integer.parseInt(request.getParameter("num1"));
+		int num2 = Integer.parseInt(request.getParameter("num2"));
+		int result=0;
+		String calc= request.getParameter("calc");
+		if(calc.equals("plus")){
+			
+		}else if(calc.equals("reduce")){
+			
+		}else if(calc.equals("multi")){
+			
+		}else if(calc.equals("division")){
+			
+		}
+		
+	}
+	
+}

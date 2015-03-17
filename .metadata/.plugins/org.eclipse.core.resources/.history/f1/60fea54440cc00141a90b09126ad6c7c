@@ -1,0 +1,42 @@
+package servlet.form;
+
+import java.io.IOException;
+import java.util.Enumeration;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class FormRequestServlet extends HttpServlet{
+	
+	
+	
+	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException,ServletException{
+		//name,password,age,email, sex,language(str[]),phone0,phone1,phone2,picture,adv
+		request.setCharacterEncoding("UTF-8");
+		
+		
+		Enumeration<String> str = request.getParameterNames();
+		while(str.hasMoreElements()){
+			System.out.print(str.nextElement()+" : ");
+			System.out.println(request.getParameter(str.nextElement()));
+			
+		}
+		
+		String name = request.getParameter("name");
+		String password = request.getParameter("password");
+		String age = request.getParameter("age");
+		String email = request.getParameter("email");
+		String sex = request.getParameter("sex");
+		String[] language = request.getParameterValues("language");
+		String phoneNum = request.getParameter("phone0");
+		phoneNum+=request.getParameter("phone1");
+		phoneNum+=request.getParameter("phone2");
+		String picure = request.getParameter("picture");
+		String intro = request.getParameter("intro");
+		String adv = request.getParameter("adv");
+		
+		
+	}
+}

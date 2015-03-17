@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="/myweb/calculate" method="post">
+<table>
+<input type="number" name="num1">
+<input type="number" name="num2">
+
+<label><input type="radio" name="calc" value="plus">＋</label>
+<label><input type="radio" name="calc" value="reduce">－</label>
+<label><input type="radio" name="calc" value="multi">×</label>
+<label><input type="radio" name="calc" value="division">÷</label>
+
+<input type="submit" value="계산">
+</table>
+</form>
+</body>
+</html>

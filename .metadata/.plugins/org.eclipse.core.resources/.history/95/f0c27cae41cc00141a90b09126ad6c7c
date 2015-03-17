@@ -1,0 +1,48 @@
+package servlet.form;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Enumeration;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class FormRequestServlet extends HttpServlet{
+	
+	
+	
+	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException,ServletException{
+		//name,password,age,email, sex,language(str[]),phone0,phone1,phone2,picture,adv
+		request.setCharacterEncoding("UTF-8");
+		PrintWriter out = response.getWriter();
+		
+//		Enumeration<String> str = request.getParameterNames();
+//		while(str.hasMoreElements()){
+//			String str2 = str.nextElement();
+//			System.out.print(str2+" : ");
+//			System.out.println(request.getParameter(str2));
+//			
+//		}
+		
+		String name = request.getParameter("name");
+		String password = request.getParameter("password");
+		String age = request.getParameter("age");
+		String email = request.getParameter("email");
+		String sex = request.getParameter("sex");
+		String[] language = request.getParameterValues("language");
+		String phoneNum = request.getParameter("phone0");
+		phoneNum+=request.getParameter("phone1");
+		phoneNum+=request.getParameter("phone2");
+		String picture = request.getParameter("picture");
+		String intro = request.getParameter("intro");
+		String command = request.getParameter("command");
+		String adv = request.getParameter("adv");
+		String lang="";
+		for(int i=0;i<language.length;i++){
+			lang += language[i]+",";
+		}
+		out.println(name+"\n"+password+"\n"+age+"\n"+email+"\n"+sex+"\n"+lang+"\n"+phoneNum+"\n"+picture+"\n"+intro+"\n"+adv+"\n"+command);
+	}
+}

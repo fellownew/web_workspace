@@ -1,0 +1,50 @@
+package servlet.form;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Enumeration;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class FormRequestServlet extends HttpServlet{
+	
+	
+	
+	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException,ServletException{
+		//name,password,age,email, sex,language(str[]),phone0,phone1,phone2,picture,adv
+		request.setCharacterEncoding("UTF-8");//요청 데이터의 인코딩 적용.
+		response.setContentType("text/html;charset=UTF-8");//응답데이터의 contentType 타입.
+		PrintWriter out = response.getWriter();
+		
+		Enumeration<String> str = request.getParameterNames();
+		while(str.hasMoreElements()){
+			String str2 = str.nextElement();
+			out.print(str2+" : ");
+			out.println(request.getParameter(str2)+"<br/>");
+			
+		}
+		
+		String name = request.getParameter("name");
+		String password = request.getParameter("password");
+		String age = request.getParameter("age");
+		String email = request.getParameter("email");
+		String sex = request.getParameter("sex");
+		String[] language = request.getParameterValues("language");
+		String phoneNum = request.getParameter("phone0")+"-";
+		phoneNum+=request.getParameter("phone1")+"-";
+		phoneNum+=request.getParameter("phone2");
+		String picture = request.getParameter("picture");
+		String intro = request.getParameter("intro");
+		String command = request.getParameter("command");
+		String adv = request.getParameter("adv");
+		String lang="";
+		for(int i=0;i<language.length;i++){
+			lang += language[i]+",";
+		}
+		out.println("<p/>");
+		out.println(name+"<br/>"+password+"<br/>"+age+"<br/>"+email+"<br/>"+sex+"<br/>"+lang+"<br/>"+phoneNum+"<br/>"+picture+"<br/>"+intro+"<br/>"+adv+"<br/>"+command);
+	}
+}

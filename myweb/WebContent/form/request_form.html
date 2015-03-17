@@ -24,14 +24,14 @@
 <label><input type="checkbox" name="language" value="ruby">Ruby</label>
 <br/>
 <input type="hidden" name="command" value="register" checked="checked">
-전화번호 : <select name="phone1">
+전화번호 : <select name="phone0">
 <option value="010" selected="selected">010</option>
 <option>011</option>
 <option>016</option>
 <option>019</option>
 </select>
 <!-- value를 지정 안하면 텍스트값이 넘어감. -->
-<input type="number" name="firstNum" size="4" maxlength="4"><input type="number" name="lastNum" size="4" maxlength="4">
+<input type="number" name="phone1" size="4" maxlength="4"><input type="number" name="phone2" size="4" maxlength="4">
 <br/>
 사진을 넣으세요.<input type="file" name="picture"><p/>
 자기소개<br/>
@@ -43,7 +43,7 @@
 <input type="submit" value="가입">
 <input type="reset" value="초기화"> <!-- value는 버튼의 라벨, 사용자가 클릭하면 form의 action에 지정된 URL로 입력된 모든 값들을 가지고 이동함. -->
 <input type="button" value="누르지 마세요" onclick="alert('하여간 누르지 말라면 꼭 눌러요')"><br/>
-<input type="image" src="/myweb/images/buttonimg.jpg" onclick="alert('시스템을 종료합니다.')">
+<input type="image" src="/myweb/images/buttonimg.jpg">
 </form>
 </body>
 </html>

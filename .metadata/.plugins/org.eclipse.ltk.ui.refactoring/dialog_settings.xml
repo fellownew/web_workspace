@@ -4,4 +4,10 @@
 		<item value="600" key="width"/>
 		<item value="400" key="height"/>
 	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+	</section>
+	<section name="RefactoringWizard.Externalize strings in &apos;FormRequestServlet.java&apos;">
+		<item value="763" key="width"/>
+		<item value="553" key="height"/>
+	</section>
 </section>
