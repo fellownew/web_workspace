@@ -1,0 +1,26 @@
+package servlet.dispatch;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class BasicDispatchTestServlet extends HttpServlet{
+	public void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException, ServletException{
+		request.setCharacterEncoding("UTF-8");
+		String page = request.getParameter("page");
+		RequestDispatcher rd = null;
+		if(page.equals("one")){
+			RequestDispatcher rd= request.getRequestDispatcher("/form/login_fail.jsp");//app기준의 url이기 때문에 /myweb으로 시작하면 안됨.
+		}else{
+			RequestDispatcher rd= request.getRequestDispatcher("/form/login_fail.jsp");//app기준의 url이기 때문에 /myweb으로 시작하면 안됨.
+			
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="/myweb/calculate" method="post">
+
+<table style="text-align:center">
+<tr>
+	<td colspan="4"><h1>계 산 폼</h1></td>
+</tr>
+<tr>
+	<td colspan="2"><input type="number" name="num1" autofocus="autofocus"></td>
+	<td colspan="2"><input type="number" name="num2"></td>
+</tr>
+<tr>
+	<td><label><input type="radio" name="calc" value="plus">＋</label></td>
+	<td><label><input type="radio" name="calc" value="reduce">－</label></td>
+	<td><label><input type="radio" name="calc" value="multi">×</label></td>
+	<td><label><input type="radio" name="calc" value="division">÷</label></td>
+</tr>
+<tr>
+	<td colspan="4"><input type="submit" value="계산"></td>
+</tr>
+</table>
+
+</form>
+
+<form action="/myweb/calculate" method="post">
+
+<table style="text-align:center">
+<tr>
+	<td colspan="4"><h1>계 산 폼</h1></td>
+</tr>
+<tr>
+	<td colspan="2"><input type="number" name="num1" autofocus="autofocus"></td>
+	<td colspan="2"><input type="number" name="num2"></td>
+</tr>
+<tr>
+	<td><select name="clac2">
+<option value="plus">＋</option>
+<option value="reduce">－</option>
+<option value="multi">×</option>
+<option value="division">÷</option></td>
+</select>
+
+	<td><label><input type="radio" name="calc" value="plus">＋</label></td>
+	<td><label><input type="radio" name="calc" value="reduce">－</label></td>
+	<td><label><input type="radio" name="calc" value="multi">×</label></td>
+	<td><label><input type="radio" name="calc" value="division">÷</label></td>
+</tr>
+<tr>
+	<td colspan="4"><input type="submit" value="계산"></td>
+</tr>
+</table>
+
+</form>
+</body>
+</html>
