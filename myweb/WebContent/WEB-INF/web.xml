@@ -9,10 +9,56 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <!-- App 내 모든 Component들이 공통으로 사용할 초기 파라미터 설정 -->
+   <context-param>
+  	<param-name>address</param-name>
+  	<param-value>경기도 성남시 분당구 삼평동 유스페이스 8층 KOSTA</param-value>
+  </context-param>
+     <context-param>
+  	<param-name>phone number</param-name>
+  	<param-value>070-5039-5806</param-value>
+  </context-param>
+  <servlet>
+  	<servlet-name>contextInit</servlet-name>
+  	<servlet-class>servlet.initparam.ContextInitParamServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>contextInit</servlet-name>
+  	<url-pattern>/contextInit</url-pattern>
+  </servlet-mapping>
+  <!-- JDBC 연동  -->
+  
+  <context-param>
+  	<param-name>url</param-name>
+  	<param-value>jdbc:oracle:thin:@127.0.0.1:1521:XE</param-value>
+  </context-param>
+     <context-param>
+  	<param-name>user</param-name>
+  	<param-value>scott</param-value>
+  </context-param>
+       <context-param>
+  	<param-name>password</param-name>
+  	<param-value>tiger</param-value>
+  </context-param>
+  <servlet>
+  	<servlet-name>searchbyid</servlet-name>
+  	<servlet-class>department.servlet.SearchByIdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>searchbyid</servlet-name>
+  	<url-pattern>/searchbyid</url-pattern>
+  </servlet-mapping>
+  
+  
+  
   
   <servlet>
   	<servlet-name>counter</servlet-name>
   	<servlet-class>servlet.basic.CounterServlet</servlet-class>
+  	<init-param>
+  		<param-name>filepath</param-name>
+  		<param-value>C:\\JAVA\\counter.dat</param-value>
+  	</init-param>
   </servlet>
   <servlet-mapping>
   	<servlet-name>counter</servlet-name>
@@ -74,7 +120,7 @@
   	<url-pattern>/basicDispatch</url-pattern>
   </servlet-mapping>
   
-     <servlet>
+  <servlet>
   	<servlet-name>calculate2</servlet-name>
   	<servlet-class>servlet.form.CalculateServlet2</servlet-class>
   </servlet>
@@ -82,5 +128,40 @@
   	<servlet-name>calculate2</servlet-name>
   	<url-pattern>/calculate2</url-pattern>
   </servlet-mapping>
+  <!-- initparam test -->
+  <servlet>
+  	<servlet-name>Korean Greeting</servlet-name>
+  	<servlet-class>servlet.initparam.GreetingServlet</servlet-class>
+  	<init-param>
+  		<param-name>greeting</param-name>
+  		<param-value>안녕하세요</param-value>
+  	</init-param>
+  	  	<init-param>
+  		<param-name>email</param-name>
+  		<param-value>asdfasdaf@kosta.or.kr</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Korean Greeting</servlet-name>
+  	<url-pattern>/korGreeting</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>English Greeting</servlet-name>
+  	<servlet-class>servlet.initparam.GreetingServlet</servlet-class>
+  	<init-param>
+  		<param-name>greeting</param-name>
+  		<param-value>Hello</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>email</param-name>
+  		<param-value>english@kosta.or.kr</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>English Greeting</servlet-name>
+  	<url-pattern>/EngGreeting</url-pattern>
+  </servlet-mapping>
+  
   
 </web-app>

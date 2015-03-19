@@ -1,0 +1,1 @@
+select department_id,department_name,location from DEPARTMENT
