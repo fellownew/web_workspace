@@ -1,0 +1,31 @@
+package department.servlet.jdbc;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServlet;
+
+import org.apache.tomcat.dbcp.dbcp.BasicDataSource;
+
+public class DataBaseUtil extends HttpServlet{
+private static DataBaseUtil inst = new DataBaseUtil();
+private BasicDataSource dataSource;
+
+private DataBaseUtil(){
+	ServletContext context = getServletContext();
+	//		String driver = "oracle.jdbc.driver.OracleDriver";
+	String url = context.getInitParameter("url"); 
+	String user = context.getInitParameter("user");
+	String password = context.getInitParameter("password");
+	
+	dataSource = new BasicDataSource();
+//	dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+	dataSource.setUrl(url);
+	dataSource.setUsername(user);
+	dataSource.setPassword(password);
+}
+
+public static DataBaseUtil getInstance(){
+	return inst;
+}
+
+
+}

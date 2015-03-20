@@ -9,6 +9,15 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <!-- listener 등록 -->
+  <listener>
+  	<listener-class>servlet.listener.MyListener</listener-class>
+  </listener>
+  <listener>
+  	<listener-class>servlet.listener.BasicDataSourceListener</listener-class>
+  </listener>
+  
+  
   <!-- App 내 모든 Component들이 공통으로 사용할 초기 파라미터 설정 -->
    <context-param>
   	<param-name>address</param-name>
@@ -49,8 +58,27 @@
   	<url-pattern>/searchbyid</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>registerDepartment</servlet-name>
+  	<servlet-class>department.servlet.RegisterDepartmentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>registerDepartment</servlet-name>
+  	<url-pattern>/registerDepartment</url-pattern>
+  </servlet-mapping>
   
-  
+  <servlet>
+  	<servlet-name>departmentDAO</servlet-name>
+  	<servlet-class>department.servlet.DepartmentDAO</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>dbUtil</servlet-name>
+  	<servlet-class>department.servlet.DataBaseUtil</servlet-class>
+  </servlet>
+    <servlet-mapping>
+  	<servlet-name>dbUtil</servlet-name>
+  	<url-pattern>/DataBaseUtil</url-pattern>
+  </servlet-mapping>
   
   <servlet>
   	<servlet-name>counter</servlet-name>

@@ -8,3 +8,8 @@
 1426577611430	Rename resource 'login_success..html'
 1426660604571	Rename local variable 'fileMesseage'
 1426662712095	Copy compilation unit
+1426810343972	Rename type 'DataBaseUTil'
+1426811176265	Rename field 'dao'
+1426818743766	Rename local variable 'rName'
+1426818750777	Rename local variable 'rLocation'
+1426825281134	Rename package 'department.servlet.jdbc'

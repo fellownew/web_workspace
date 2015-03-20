@@ -1,0 +1,22 @@
+package department.servlet.jdbc;
+
+import org.apache.tomcat.dbcp.dbcp.BasicDataSource;
+
+public class DataBaseUtil {
+private static DataBaseUtil inst = new DataBaseUtil();
+private BasicDataSource dataSource;
+
+private DataBaseUtil(){
+	dataSource = new BasicDataSource();
+	dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+	dataSource.setUrl("jdbc:oracle:thin:@127.0.0.1:1521:XE");
+	dataSource.setUsername("scott");
+	dataSource.setPassword("tiger");
+}
+
+public static DataBaseUtil getInstance(){
+	return inst;
+}
+
+
+}
