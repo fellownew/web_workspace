@@ -1,0 +1,22 @@
+package servlet.session;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class SessionLogoutServlet extends HttpServlet{
+	public void doGet(HttpServletRequest request, HttpServletResponse response){
+		doPost(request,response);
+	}
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response){
+		//로그인 여부 체크
+		HttpSession session = request.getSession();
+		Object loginInfo = session.getAttribute("login_Id");
+		if(session.getAttribute("login_Id")==null){
+			
+		}
+		session.invalidate();
+	}
+}

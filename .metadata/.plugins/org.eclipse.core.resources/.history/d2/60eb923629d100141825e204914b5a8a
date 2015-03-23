@@ -1,0 +1,55 @@
+package servlet.session;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class SessionLoginServlet extends HttpServlet{
+	private HashMap<String , String> userInfo;
+	public void init(){
+		userInfo = new HashMap<String, String>();
+		userInfo.put("id-1", "1111");
+		userInfo.put("id-2", "2222");
+		userInfo.put("id-3", "3333");
+		userInfo.put("id-4", "4444");
+		userInfo.put("id-5", "5555");
+	}
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+		doPost(request, response);
+	}
+	
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+		request.setCharacterEncoding("UTF-8");
+		String loginUrl = "";
+		String id = request.getParameter("id");
+		String password = request.getParameter("password");
+//		HttpSession session = request.getSession();
+		String failMessage = null;
+		if(userInfo.containsKey(id)){
+			
+		}else{
+			
+		}
+		
+		
+		
+		
+		
+		
+		loginUrl = "/session/login_success.jsp";
+		
+		loginUrl = "/error_page.jsp";
+		
+		
+		RequestDispatcher rd = request.getRequestDispatcher(loginUrl);
+		rd.forward(request, response);
+	}
+
+}

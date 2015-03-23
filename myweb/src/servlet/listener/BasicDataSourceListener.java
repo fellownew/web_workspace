@@ -1,5 +1,7 @@
 package servlet.listener;
 
+import java.sql.SQLException;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -12,7 +14,6 @@ public class BasicDataSourceListener implements ServletContextListener{
 	//BasicDataSource 객체를 생성.
 	@Override
 	public void contextInitialized(ServletContextEvent event) {
-		// TODO Auto-generated method stub
 		BasicDataSource dataSource = new BasicDataSource();
 		ServletContext ctx = event.getServletContext();
 		dataSource.setUrl(ctx.getInitParameter("url"));
@@ -24,14 +25,19 @@ public class BasicDataSourceListener implements ServletContextListener{
 		ctx.setAttribute("dataSource", dataSource);
 		
 	}
+	
 	@Override
 	public void contextDestroyed(ServletContextEvent event) {
-		// TODO Auto-generated method stub
-		
+		//BasicDataSource객체.close()이것은 반납처리가 아닌 정말 close()함
+		ServletContext ctx = event.getServletContext();
+		BasicDataSource dataSource = (BasicDataSource) ctx.getAttribute("dataSource");
+		if(dataSource!=null){
+			try {
+				dataSource.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
-
-
-	
-	
-
 }

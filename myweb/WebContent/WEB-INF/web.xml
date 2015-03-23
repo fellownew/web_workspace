@@ -191,5 +191,23 @@
   	<url-pattern>/EngGreeting</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>sessionLogin</servlet-name>
+  	<servlet-class>servlet.session.SessionLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>sessionLogin</servlet-name>
+  	<url-pattern>/session_login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>sessionLogout</servlet-name>
+  	<servlet-class>servlet.session.SessionLogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>sessionLogout</servlet-name>
+  	<url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
   
 </web-app>
