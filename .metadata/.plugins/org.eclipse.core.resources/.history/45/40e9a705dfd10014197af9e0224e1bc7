@@ -1,0 +1,56 @@
+package servlet.session.cart;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.HashSet;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+public class ShoppingCartServlet extends HttpServlet{
+	public void doGet(HttpServletRequest requset, HttpServletResponse response) throws IOException, ServletException{
+		doPost(requset, response);
+	}
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+		request.setCharacterEncoding("UTF-8");
+		String url=null;
+		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("login_id")==null){//로그인을 안한 상태라면.
+			url = "/session/login_form.jsp";
+			request.setAttribute("failmessage", "로그인을 해주세요");
+		}else{//로그인을 한 상태라면 작업 실시
+			url = "/WEB-INF/jsp/cart/cart.jsp";//TODO 작업 후 응답 페이지로 변경 요망.
+			String products[] = request.getParameterValues("product");//list.jsp에서 보낸 파라미터들 가져오기.
+			HashMap<String, Integer> cartList;
+			if(session.getAttribute("cartList")!=null){//불러온 attribute가 null이 아니라면 가져온다.
+				cartList = (HashMap<String, Integer>) session.getAttribute("cartList");
+				int count= 0;
+				for(int i =0;i<products.length;i++){
+					if(!cartList.containsKey(products[i])){
+						cartList.put(products[i], 0);
+					}
+					count = cartList.get(products[i]);//해당 제품의 값을 불러온 후 , 1 더하고 , 다시 put 함.
+					count++;
+					cartList.put(products[i], count);
+					count = 0;
+				}
+			}else{//null이면 맵을 새로 만든다.
+				cartList = new HashMap<String,Integer>();
+				for(int i =0;i<products.length;i++){
+				cartList.put(products[i], 1);
+				}
+			}
+
+			session.setAttribute("cartList", cartList);//위 작업을 모두 마친 후 session scope에 다시 저장한다. 
+		}
+		
+		RequestDispatcher rd = request.getRequestDispatcher(url);
+		rd.forward(request, response);
+	}
+}

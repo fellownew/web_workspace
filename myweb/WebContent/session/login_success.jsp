@@ -13,11 +13,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	로그인 성공. <%=loginId %>님 반갑습니다.
-	<form>
-	<input type="text" name="testText">
-	<input type="submit" name ="testTextSubmit" value="테스트">
-	</form>
-	<a href="/myweb/logout">로그아웃</a>
+
+	로그인 성공. <%=loginId %>님 반갑습니다.<br/>
+	<a href="/myweb/logout">로그아웃</a><br/>
+	<a href="/myweb/shoppingList">쇼핑 리스트 보기</a>
+	
 </body>
 </html>

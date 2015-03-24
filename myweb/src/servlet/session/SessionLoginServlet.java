@@ -56,8 +56,5 @@ public class SessionLoginServlet extends HttpServlet{
 		}else{
 			response.sendRedirect("/myweb/session/login_success.jsp");
 		}
-		
-
 	}
-
 }

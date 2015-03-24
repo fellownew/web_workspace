@@ -17,7 +17,7 @@ public class SessionLogoutServlet extends HttpServlet{
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
 		//로그인 여부 체크
 		HttpSession session = request.getSession();
-		Object loginInfo = session.getAttribute("login_Id");
+		Object loginInfo = session.getAttribute("login_id");
 		if(loginInfo==null){//로그인 상태가 아니라면.
 			request.setAttribute("failmessage", "로그인을 하세요");
 		}else{
@@ -27,3 +27,4 @@ public class SessionLogoutServlet extends HttpServlet{
 		rd.forward(request, response);
 	}
 }
+ 	

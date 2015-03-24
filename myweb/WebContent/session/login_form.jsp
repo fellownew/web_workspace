@@ -14,18 +14,21 @@
 	<font color=red><%=message %></font>
 <%}%>
 <!-- id/password 넘기기 -->
-<h3>로그인(Session)</h3>
+
 <table style="text-align:center">
 	<tr>
+		<td colspan="2"><h3>로그인(Session)</h3></td>
+	</tr>
+	<tr>
 		<td>ID </td>
-		<td><input type="text" name="id"></td>
+		<td><input type="text" name="id" autofocus="autofocus"></td>
 	</tr>
 	<tr>
 		<td>Password </td>
 		<td><input type="password" name="password"></td>
 	</tr>
 	<tr>
-		<td colspan="2"><input type="submit" value="로그인">
+		<td colspan="2"><input type="submit" value="로그인" style="color: white;background-color: #005D00">
 	</tr>
 </table>
 </form>

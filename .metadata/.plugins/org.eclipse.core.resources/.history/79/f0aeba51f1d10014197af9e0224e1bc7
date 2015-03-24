@@ -1,0 +1,31 @@
+<%@page import="java.util.Set"%>
+<%@page import="java.util.HashMap"%>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<% HashMap<String,Integer> cartList = (HashMap<String, Integer>) session.getAttribute("cartList"); 
+	Set<String> keyset = cartList.keySet();
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+<title>장바구니</title>
+</head>
+<body>
+<!-- 담긴 물품이 없을 경우의 메시지 이며 error메시지를 받아서 페이지 리턴 받는 방법도 있음. -->
+<!-- String errorMessage = requset.getAttribute("errorMessage");
+if(errorMessage!=null){ message }-->
+
+<%if(cartList.size()==0){ %>
+	담긴 물품이 없습니다.
+<%}%>
+
+	<% for(String key:keyset){%>
+		<%=key %> : <%=cartList.get(key) %><br/>
+	<% }%>
+
+	
+	<a href="/myweb/purchase">구매</a> - 미구현<br/> 
+	<a href="/myweb/shoppingList">쇼핑 리스트 보기</a><br/>
+	<a href="/myweb/logout">로그아웃</a> ※장바구니 내용이 없어집니다.
+</body>
+</html>

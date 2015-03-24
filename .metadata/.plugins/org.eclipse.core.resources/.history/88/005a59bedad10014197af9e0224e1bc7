@@ -1,0 +1,25 @@
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.Set"%>
+<%@page import="java.util.HashMap"%>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<% HashMap<String,Integer> cartList = (HashMap<String, Integer>) session.getAttribute("cartList"); 
+	Set<String> keyset = cartList.keySet();
+	Iterator keyIter = keyset.iterator();
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+<title>장바구니</title>
+</head>
+<body>
+	<% for(String key:keyset){%>
+		<%=key %> : <%=cartList.get(key) %><br/>
+	<% }%>
+</body>
+</html>
+
+	<% while(keyIter.hasNext()){
+		String str = (String)keyIter.next();%>
+		<%=str %> : <%=cartList.get(str) %><br/>
+	<% }%>
