@@ -1,3 +1,7 @@
 1427162300145	Rename local variable 'requset'
 1427164328719	Rename type 'ShowCartListServlet'
 1427179498090	Rename local variable 'cartList'
+1427247567100	Rename type 'SerCookie1Servlet'
+1427247572507	Rename type 'SerCookie2Servlet'
+1427249961425	Rename local variable 'cs'
+1427270617045	Copy compilation unit

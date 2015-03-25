@@ -15,7 +15,7 @@ public class FormRequestServlet extends HttpServlet{
 	
 	public void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException,ServletException{
 		//name,password,age,email, sex,language(str[]),phone0,phone1,phone2,picture,adv
-		request.setCharacterEncoding("UTF-8");//요청 데이터의 인코딩 적용.
+//		request.setCharacterEncoding("UTF-8");//요청 데이터의 인코딩 적용.
 		response.setContentType("text/html;charset=UTF-8");//응답데이터의 contentType 타입.
 		PrintWriter out = response.getWriter();//응답 데이터의 Writer가져오기.
 		
