@@ -1,0 +1,18 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%!private int counter=0; %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+<title>Counter</title>
+</head>
+<body>
+<%counter++; 
+Date d = new Date();
+SimpleDateFormat sdf = new SimpleDateFormat("HH시 mm분 ss초"); %>
+당신은 <%=counter %>번째 방문객 입니다.<br/>
+현재시각은 <%=sdf.format(d) %>입니다.
+</body>
+</html>

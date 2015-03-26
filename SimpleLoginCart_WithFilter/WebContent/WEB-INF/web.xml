@@ -47,6 +47,16 @@
   </servlet-mapping>
   
   <!-- 필터 목록 -->
+    	
+  	<filter>
+  		<filter-name>login filter</filter-name>
+  		<filter-class>filter.LoginConfirmFilter</filter-class>
+  	</filter>
+  	<filter-mapping>
+  		<filter-name>login filter</filter-name>
+  		<url-pattern>/confirm/*</url-pattern>
+  	</filter-mapping>
+  	
     <filter>
   		<filter-name>encoding filter</filter-name>
   		<filter-class>filter.EncodingFilter</filter-class>
@@ -59,15 +69,7 @@
   		<filter-name>encoding filter</filter-name>
   		<url-pattern>/*</url-pattern>
   	</filter-mapping>
-  	
-  	<filter>
-  		<filter-name>login filter</filter-name>
-  		<filter-class>filter.LoginConfirmFilter</filter-class>
-  	</filter>
-  	<filter-mapping>
-  		<filter-name>login filter</filter-name>
-  		<url-pattern>/confirm/*</url-pattern>
-  	</filter-mapping>
+
   
   
 </web-app>

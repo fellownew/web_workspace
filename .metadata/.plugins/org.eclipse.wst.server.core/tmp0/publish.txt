@@ -1,5 +1,7 @@
 #Tomcat publish data
-#Wed Mar 25 18:20:11 KST 2015
+#Thu Mar 26 17:24:32 KST 2015
 org.eclipse.jst.jee.server\:SimpleLoginCart_WithFilter=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\SimpleLoginCart_WithFilter
 org.eclipse.jst.jee.server\:HelloworldWeb=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\HelloworldWeb
+org.eclipse.jst.jee.server\:SimpleLoginCart_WithFilter_inst_inst=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\SimpleLoginCart_WithFilter_inst_inst
+org.eclipse.jst.jee.server\:myjsp=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\myjsp
 org.eclipse.jst.jee.server\:myweb=C\:\\JAVA\\apache-tomcat-7.0.59\\webapps\\myweb

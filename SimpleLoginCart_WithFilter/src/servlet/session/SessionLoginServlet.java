@@ -53,7 +53,7 @@ public class SessionLoginServlet extends HttpServlet{
 			RequestDispatcher rdp = request.getRequestDispatcher("/session/login_form.jsp");
 			rdp.forward(request, response);
 		}else{//성공
-			response.sendRedirect("/SimpleLoginCart_WithFilter/session/login_success.jsp");
+			response.sendRedirect("/SimpleLoginCart_WithFilter/confirm/login_success.jsp");
 		}
 	}
 }

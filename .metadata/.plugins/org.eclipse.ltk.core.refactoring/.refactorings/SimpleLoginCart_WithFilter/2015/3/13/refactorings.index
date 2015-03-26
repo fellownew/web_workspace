@@ -1,2 +1,6 @@
 1427271959280	Rename type 'LoginCheckFilter'
 1427272877648	Delete element
+1427329287981	Move 'Readme.txt' to 'diagram'
+1427329303365	Rename resource 'diagram'
+1427329408724	Delete element
+1427329744305	Move 'login_success.jsp' to 'confirm'

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <servers>
-  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v7.0 Server at 127.0.0.1-config" hostname="127.0.0.1" id="Tomcat v7.0 Server at 127.0.0.1" name="Tomcat v7.0 Server at 127.0.0.1" runtime-id="Apache Tomcat v7.0" server-type="org.eclipse.jst.server.tomcat.70" server-type-id="org.eclipse.jst.server.tomcat.70" start-timeout="45" stop-timeout="15" testEnvironment="false" timestamp="8">
-    <list key="modules" value0="SimpleLoginCart_WithFilter::org.eclipse.jst.jee.server:SimpleLoginCart_WithFilter::jst.web::3.0" value1="HelloworldWeb::org.eclipse.jst.jee.server:HelloworldWeb::jst.web::3.0" value2="myweb::org.eclipse.jst.jee.server:myweb::jst.web::3.0"/>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v7.0 Server at 127.0.0.1-config" hostname="127.0.0.1" id="Tomcat v7.0 Server at 127.0.0.1" name="Tomcat v7.0 Server at 127.0.0.1" runtime-id="Apache Tomcat v7.0" server-type="org.eclipse.jst.server.tomcat.70" server-type-id="org.eclipse.jst.server.tomcat.70" start-timeout="45" stop-timeout="15" testEnvironment="false" timestamp="10">
+    <list key="modules" value0="SimpleLoginCart_WithFilter::org.eclipse.jst.jee.server:SimpleLoginCart_WithFilter::jst.web::3.0" value1="HelloworldWeb::org.eclipse.jst.jee.server:HelloworldWeb::jst.web::3.0" value2="myweb::org.eclipse.jst.jee.server:myweb::jst.web::3.0" value3="SimpleLoginCart_WithFilter_inst_inst::org.eclipse.jst.jee.server:SimpleLoginCart_WithFilter_inst_inst::jst.web::3.0" value4="myjsp::org.eclipse.jst.jee.server:myjsp::jst.web::3.0"/>
   </server>
 </servers>

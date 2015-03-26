@@ -5,10 +5,13 @@
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\KOSTA_03_011\Desktop\SimpleLoginCart_WithFilter_inst"/>
 			<item value="C:\Users\KOSTA_03_011\Desktop\SimpleLoginCart_WithFilter"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
 		</list>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 </section>
