@@ -7,6 +7,7 @@
 <title>Request</title>
 </head>
 <body>
+<jsp:include page="/include/menu.jsp"/>
 	<form action="response.jsp" method="post">
 	<table style="text-align: center">
 	<tr>

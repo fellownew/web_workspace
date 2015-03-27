@@ -1,6 +1,0 @@
-package department.servlet.jdbc;
-
-public class DepartmentDAO {
-	private static DepartmentDAO dao = new DepartmentDAO();
-
-}

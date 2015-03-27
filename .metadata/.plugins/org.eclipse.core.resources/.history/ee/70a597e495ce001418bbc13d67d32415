@@ -1,5 +1,0 @@
-package department.servlet.jdbc;
-
-public class DataBaseUtil {
-
-}

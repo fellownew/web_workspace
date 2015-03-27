@@ -1,9 +1,0 @@
-package servlet.lifecycle;
-
-import javax.servlet.http.HttpServlet;
-
-public class LifecycleServlet extends HttpServlet{
-	public LifecycleServlet(){
-		System.out.println("LifecycleServlet 생성자 () 호출");
-	}
-}

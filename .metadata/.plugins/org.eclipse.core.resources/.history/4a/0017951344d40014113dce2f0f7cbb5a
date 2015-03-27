@@ -1,0 +1,31 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+	<jsp:useBean id="member" class="servlet.vo.Member" scope="page"/>
+	<!--jsp:setProperty property="name" name="member" value="이철수"-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=UTF-8>
+<title>Response2</title>
+</head>
+<body>
+
+
+	ID : <%=member.getId() %> <br/>
+	Password : <%=member.getPassword() %>  <br/>
+	이름 : <%=member.getName() %>  <br/>
+	나이 : <%=member.getAge() %>  <br/>
+	결혼 여부 : <%=member.isMarriage()==true?"기혼":"미혼"%>  <p/>
+	
+	
+
+		<jsp:setProperty property="*" name="member"/>
+	ID : <jsp:getProperty property="id" name="member"/><br/>
+	password : <jsp:getProperty property="password" name="member"/><br/>
+	이름 :<jsp:getProperty property="name" name="member"/><br/>
+	나이 : <jsp:getProperty property="age" name="member"/><br/>
+	결혼여부 : <jsp:getProperty property="marriage" name="member"/><p/>
+	
+	
+		<a href="/myjsp/actiontag/request.jsp">요청페이지로 가기</a>
+</body>
+</html>

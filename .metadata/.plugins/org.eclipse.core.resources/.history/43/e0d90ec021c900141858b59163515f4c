@@ -1,7 +1,0 @@
-package servlet.basic;
-
-import javax.servlet.http.HttpServlet;
-
-public class CounterServlet extends HttpServlet{
-	
-}

@@ -18,6 +18,7 @@
 <title>Counter</title>
 </head>
 <body>
+<jsp:include page="/include/menu.jsp"/>
 	<%
 		counter++; 
 		Date d = new Date();

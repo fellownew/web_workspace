@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.8" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <package id="1" language="java" name="servlet" project="SimpleLoginCart_WithFilter" 
+    file="/SimpleLoginCart_WithFilter/src/servlet" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="55" width="122" x="74" y="52"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="2" language="java" name="servlet.session.cart.ShowShoppingListServlet" project="SimpleLoginCart_WithFilter" 
+    file="/SimpleLoginCart_WithFilter/src/servlet/session/cart/ShowShoppingListServlet.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="124" width="337" x="236" y="52"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <component id="3" language="java" name="src" project="SimpleLoginCart_WithFilter" 
+    file="/SimpleLoginCart_WithFilter/src" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="43" width="137" x="613" y="52"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </component>  
+  <class id="4" language="java" name="filter.LoginConfirmFilter" project="SimpleLoginCart_WithFilter" 
+    file="/SimpleLoginCart_WithFilter/src/filter/LoginConfirmFilter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="357" x="790" y="52"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="5" language="java" name="servlet.session.cart" project="SimpleLoginCart_WithFilter" 
+    file="/SimpleLoginCart_WithFilter/src/servlet/session/cart" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="55" width="164" x="1187" y="52"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="6" language="java" name="servlet.session.LogoutServlet" project="SimpleLoginCart_WithFilter" 
+    file="/SimpleLoginCart_WithFilter/src/servlet/session/LogoutServlet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="124" width="337" x="1391" y="52"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="7" language="java" name="filter" project="SimpleLoginCart_WithFilter" 
+    file="/SimpleLoginCart_WithFilter/src/filter" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="55" width="122" x="1768" y="52"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="8" language="java" name="servlet.RedirectServlet" project="SimpleLoginCart_WithFilter" 
+    file="/SimpleLoginCart_WithFilter/src/servlet/RedirectServlet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="124" width="337" x="1930" y="52"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="filter.EncodingFilter" project="SimpleLoginCart_WithFilter" 
+    file="/SimpleLoginCart_WithFilter/src/filter/EncodingFilter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="160" width="357" x="2307" y="52"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="servlet.session.cart.ShoppingCartServlet" project="SimpleLoginCart_WithFilter" 
+    file="/SimpleLoginCart_WithFilter/src/servlet/session/cart/ShoppingCartServlet.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="124" width="337" x="2704" y="52"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="servlet.session.SessionLoginServlet" project="SimpleLoginCart_WithFilter" 
+    file="/SimpleLoginCart_WithFilter/src/servlet/session/SessionLoginServlet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="160" width="337" x="3081" y="52"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="12" language="java" name="servlet.session" project="SimpleLoginCart_WithFilter" 
+    file="/SimpleLoginCart_WithFilter/src/servlet/session" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="55" width="133" x="3458" y="52"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

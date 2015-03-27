@@ -38,8 +38,15 @@
 	</servlet-mapping>
 	
 	
-	
-	
+	<!-- 서블릿 등록 -->
+	<servlet>
+		<servlet-name>set attribute</servlet-name>
+		<servlet-class>servlet.SetAttributeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>set attribute</servlet-name>
+		<url-pattern>/setAttribute</url-pattern>
+	</servlet-mapping>
 	
 	
 		
