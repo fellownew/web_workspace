@@ -1,0 +1,8 @@
+select department_id,department_name,location from DEPARTMENT
+
+
+select customer_id,customer_pwd from customer where customer_id='id-1'
+
+insert into customer values ('id-2','2222','임꺽정',9,'남',33,'도둑','경기','010-2333-2444')
+
+String id,String password,String name,String sex,     int age,String job,String address,String phoneNum

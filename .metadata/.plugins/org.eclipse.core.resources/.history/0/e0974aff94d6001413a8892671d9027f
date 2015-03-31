@@ -1,0 +1,8 @@
+package servlet.vo;
+
+import java.io.Serializable;
+
+public class Address implements Serializable{
+	private String ID,zipcode,addressDetail;
+	
+}

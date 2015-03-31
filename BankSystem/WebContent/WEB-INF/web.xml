@@ -81,4 +81,15 @@
 		<url-pattern>/register</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>check</servlet-name>
+		<servlet-class>confirm.RedirectServlet</servlet-class>
+	</servlet>  
+	<servlet-mapping>
+		<servlet-name>check</servlet-name>
+		<url-pattern>/login/success</url-pattern>
+		<url-pattern>/register/success</url-pattern>
+	</servlet-mapping>
+	
+	
 </web-app>

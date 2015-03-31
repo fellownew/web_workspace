@@ -6,7 +6,7 @@
 <title>회원가입</title>
 </head>
 <body>
-<form action="/BankSystem/register">
+<form action="/BankSystem/register" method="post">
 <table>
 
 	<tr>
@@ -22,8 +22,8 @@
 		<td><input type="text" name="name" size="30" placeholder="이름" required="required"></td>
 	</tr>
 	<tr>
-		<td><label><input type="radio" name="sex" checked="checked">Male</label>
-		    <label><input type="radio" name="sex">Female</label></td>
+		<td><label><input type="radio" name="sex" checked="checked" value="남">Male</label>
+		    <label><input type="radio" name="sex" value="여">Female</label></td>
 	</tr>
 	<tr>
 		<td><input type="number" name="age" size="30" min="18" placeholder="나이" required="required"></td>

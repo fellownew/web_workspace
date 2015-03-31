@@ -14,7 +14,7 @@ import org.apache.tomcat.dbcp.dbcp.BasicDataSource;
 
 public class DataBaseUtil{
 	private static DataBaseUtil inst = new DataBaseUtil();
-	private static BasicDataSource dataSource= new BasicDataSource();;
+	private static BasicDataSource dataSource= new BasicDataSource();
 
 	private DataBaseUtil() {
 //		ServletContext context = getServletContext();

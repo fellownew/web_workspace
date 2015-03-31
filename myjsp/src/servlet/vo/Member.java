@@ -1,9 +1,12 @@
 package servlet.vo;
 
-public class Member {
+import java.io.Serializable;
+
+public class Member implements Serializable{
 	private String id,password, name;
 	private int age;
 	private boolean marriage;
+	private Address address;
 	public Member(){}
 	public Member(String id, String password, String name, int age,boolean marriage) {
 		super();
@@ -12,6 +15,17 @@ public class Member {
 		this.name = name;
 		this.age = age;
 		this.marriage = marriage;
+	}
+	
+	public Member(String id, String password, String name, int age,boolean marriage, Address address) {
+		super();
+		this.id = id;
+		this.password = password;
+		this.name = name;
+		this.age = age;
+		this.marriage = marriage;
+		this.address = address;
+		
 	}
 	
 	public String getId() {
@@ -44,6 +58,14 @@ public class Member {
 	public void setMarriage(boolean marriage) {
 		this.marriage = marriage;
 	}
+	
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -88,7 +110,7 @@ public class Member {
 	}
 	@Override
 	public String toString() {
-		return "회원정보 [ID=" + id + ", Password=" + password + ",  이름=" + name + ", 나이=" + age + ", 결혼여부=" + marriage + "]";
+		return "회원정보 [ID=" + id + ", Password=" + password + ",  이름=" + name + ", 나이=" + age + ", 결혼여부=" + marriage + "주소 ="+address+"]";
 	}
 	
 }

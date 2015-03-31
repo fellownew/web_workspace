@@ -8,3 +8,4 @@ org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
 org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
 org.eclipse.jdt.core.compiler.source=1.8
 org.eclipse.jdt.core.userLibrary.dbcp=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="C\:/JAVA/API/DBCP/commons-dbcp2-2.1.jar"/>\r\n\t<archive path\="C\:/JAVA/API/DBCP/commons-logging-1.2.jar"/>\r\n\t<archive path\="C\:/JAVA/API/DBCP/commons-pool2-2.3.jar"/>\r\n</userlibrary>\r\n
+org.eclipse.jdt.core.userLibrary.jstl=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="C\:/JAVA/API/JSTL/javax.servlet.jsp.jstl-1.2.1.jar"/>\r\n\t<archive path\="C\:/JAVA/API/JSTL/javax.servlet.jsp.jstl-api-1.2.1.jar"/>\r\n</userlibrary>\r\n

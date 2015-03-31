@@ -1,0 +1,22 @@
+<%@page import="servlet.vo.Address"%>
+<%@page import="servlet.vo.Member"%>
+<%@ page contentType="text/html;charset=UTF-8"%>
+
+<%
+request.setAttribute("name", "홍길동");
+session.setAttribute("name", "임꺽정-session");
+request.setAttribute("age",20);
+request.setAttribute("address",new Address("id-0","123-456","여기")); 
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getAttribute</title>
+</head>
+<body>
+	${name } <br/>
+	${age }
+	
+</body>
+</html>

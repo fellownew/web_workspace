@@ -1,0 +1,25 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EL_Operator</title>
+</head>
+<body>
+<!-- 
+EL의 Literal value 
+문자열 : "값", '값'
+숫자 : 정수, 실수
+boolean  : true/false
+null (출력이 안되는 값)
+ - EL 에서의 리터럴 값 출력 : ${값} - ${"abc"}, ${'안녕'}, ${35}
+-->
+
+
+
+숫자 : ${2099 } , ${4234.5623 }
+문자열 : ${"문자열" } , ${'String' }
+
+
+</body>
+</html>

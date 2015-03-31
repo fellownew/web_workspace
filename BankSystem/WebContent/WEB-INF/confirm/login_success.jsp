@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>로그인 성공</title>
 </head>
 <body>
 로그인 성공. <%=loginId %> 님 환영합니다.<p>

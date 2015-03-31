@@ -6,6 +6,8 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
+import jdbc.CustomerDAO;
+
 import org.apache.tomcat.dbcp.dbcp.BasicDataSource;
 
 
@@ -24,6 +26,8 @@ public class BasicDataSourceListener implements ServletContextListener{
 		
 		ctx.setAttribute("dataSource", dataSource);
 		
+		CustomerDAO dao = CustomerDAO.getInstance();
+		dao.setDataSource(dataSource);
 	}
 	
 	@Override

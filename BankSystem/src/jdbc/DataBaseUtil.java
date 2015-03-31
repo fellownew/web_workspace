@@ -14,7 +14,7 @@ import org.apache.tomcat.dbcp.dbcp.BasicDataSource;
 
 public class DataBaseUtil{
 	private static DataBaseUtil inst = new DataBaseUtil();
-	private static BasicDataSource dataSource= new BasicDataSource();
+//	private static BasicDataSource dataSource= new BasicDataSource();
 
 	private DataBaseUtil() {}
 	
@@ -22,9 +22,9 @@ public class DataBaseUtil{
 		return inst;
 	}
 
-	public static Connection getConnection() throws SQLException {
-		return dataSource.getConnection();
-	}
+//	public static Connection getConnection() throws SQLException {
+//		return dataSource.getConnection();
+//	}
 
 	public void close(ResultSet rset, Statement stmt, Connection conn)
 			throws SQLException {
