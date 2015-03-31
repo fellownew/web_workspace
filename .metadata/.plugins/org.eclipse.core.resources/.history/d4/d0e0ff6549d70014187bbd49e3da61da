@@ -1,0 +1,31 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Choose</title>
+</head>
+<body>
+<% request.setAttribute("age",33); %>
+
+
+<c:choose>
+당신의 나이는 ${request.age }세 이므로 당신은 
+	<c:when test="${request.age<=10 }">
+		어린이
+	</c:when>
+	<c:when test="${request.age>10 } && ${request.age <=20}">
+		청소년
+	</c:when>
+	<c:otherwise>
+		성인
+	</c:otherwise>
+
+</c:choose>
+입니다.
+
+
+</body>
+</html>

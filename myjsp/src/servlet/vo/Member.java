@@ -110,7 +110,7 @@ public class Member implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "회원정보 [ID=" + id + ", Password=" + password + ",  이름=" + name + ", 나이=" + age + ", 결혼여부=" + marriage + "주소 ="+address+"]";
+		return "회원정보 [ID=" + id + ", Password=" + password + ",  이름=" + name + ", 나이=" + age + ", 결혼여부=" + marriage + ", 주소 ="+address+"]";
 	}
 	
 }

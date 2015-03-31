@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
-<%@ page isELIgnored="true" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 request.setCharacterEncoding("UTF-8");
 
@@ -16,7 +16,17 @@ request.setCharacterEncoding("UTF-8");
 
 	이름 : ${param.name } <br/>
 	나이 : ${param.age } <br/>
-	취미 : ${paramValues.hobby[0] }, ${paramValues.hobby[1] }, ${paramValues.hobby[2] }<p/>
+	<c:choose>
+		<c:when test="${not empty paramValues.hobby }">
+		취미 : <c:forEach items="${paramValues.hobby }" var="hob">
+					${hob }
+				</c:forEach><p/>
+		</c:when>
+		<c:otherwise>
+			선택된 취미가 없습니다.
+		</c:otherwise>
+	</c:choose>
+
 
 <h2>쿠키 얻기</h2>
 	쿠키 : ${cookie.cookie_id.value } ,  ${cookie["now"].value }

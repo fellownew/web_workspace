@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;myjsp/WebContent/jstl/foreach.jsp&apos; to &apos;forEach.jsp&apos;" description="Rename resource &apos;foreach.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/jstl/foreach.jsp" name="forEach.jsp" stamp="1427777029180" updateReferences="true"/>
+</session>
