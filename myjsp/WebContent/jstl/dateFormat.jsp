@@ -21,7 +21,7 @@
  	locale 설정 : fmt:setLocale value="언어코드_국가코드"
   -->
  <c:set var="now" value="<%=new java.util.Date() %>"/>
- <fmt:setLocale value="en_US"/>
+ <!-- fmt:setLocale value="en_US"/-->
 <h2>formatDate 태그를 이용해 날짜 형식화</h2>
 1) <fmt:formatDate value="${now }" type="date"/> <br/>
 2) <fmt:formatDate value="${now }" type="time"/> <br/>

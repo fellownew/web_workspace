@@ -1,0 +1,13 @@
+package calc.model.service;
+
+public class CalculateService {
+	private CalculateService inst = new CalculateService();
+	
+	private CalculateService(){}
+	
+	public int plus(int num1,int num2){
+		int result = num1+num2;
+		return result;
+	}
+	
+}

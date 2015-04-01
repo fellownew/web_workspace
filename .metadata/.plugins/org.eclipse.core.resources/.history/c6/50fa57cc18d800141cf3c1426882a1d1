@@ -1,0 +1,7 @@
+package calc.model.service;
+
+public class CalculateService {
+	private double num1,num2;
+	private String operand;
+	
+}

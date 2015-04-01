@@ -1,0 +1,13 @@
+package calc.model.dao;
+
+public class CalcResultDAO {
+	private static CalcResultDAO dao = new CalcResultDAO();
+	
+	private CalcResultDAO(){}
+	public static CalcResultDAO getInstance(){
+		return dao;
+	}
+	
+	
+	
+}
