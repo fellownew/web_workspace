@@ -1,0 +1,22 @@
+package controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class SearchController implements Controller {
+
+	@Override
+	public AttributeAndView handleRequest(HttpServletRequest request,HttpServletResponse response) throws Exception {
+		String id = request.getParameter("id");
+		
+		System.out.println("SearchController에서 Model 호출하여 BL 처리");//있는지 없는지 확인.
+		System.out.println("조회 ID : "+ id);
+		String result1 = "조회결과1";
+		String result2 = "조회결과2";
+		
+		
+		return new AttributeAndView(false, "/WEB-INF/view/response/response2.jsp");
+		// TODO Auto-generated method stub
+	}
+
+}

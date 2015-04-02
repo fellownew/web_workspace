@@ -1,0 +1,10 @@
+package member.vo;
+
+import java.util.Date;
+
+public class Member {
+	private String id,password,name,email;
+	private Date date;
+	
+	
+}

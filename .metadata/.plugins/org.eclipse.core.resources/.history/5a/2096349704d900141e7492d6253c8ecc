@@ -1,0 +1,26 @@
+package member.controller;
+
+import java.util.Date;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import member.model.service.MemberService;
+import member.vo.Member;
+import common.controller.AttributeAndView;
+import common.controller.Controller;
+
+public class LoginController implements Controller {
+
+	@Override
+	public AttributeAndView handleRequest(HttpServletRequest request,HttpServletResponse response) throws Exception {
+		MemberService ms = MemberService.getInstance();
+		String id =  request.getParameter("id");
+		String password = request.getParameter("password");
+		Member registerMember = new Member(id,password);
+		boolean login = ms.loginMember(registerMember);
+		
+		return new AttributeAndView(false, "/WEB-INF/view/member/register_success.jsp");
+	}
+
+}

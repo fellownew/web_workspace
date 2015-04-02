@@ -6,9 +6,8 @@
 <title>Request2</title>
 </head>
 <body>
-
+<font color="red">${requestScope.errorMessage }</font>
 	<h2>조회요청</h2>
-
 	<form action="${initParam.rootPath }/FrontController" method="post">
 		<input type="hidden" name ="command" value="search">
 		<input type="text" name = "id" placeholder="조회 ID">

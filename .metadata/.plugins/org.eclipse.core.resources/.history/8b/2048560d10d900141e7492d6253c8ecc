@@ -1,0 +1,13 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ include file="/WEB-INF/view/menu.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 가입 성공</title>
+</head>
+<body>
+	${requestScope.id }님 환영합니다. 회원가입에 성공하였습니다.
+	가입시 입력 정보 출력 : ㄹㄹ
+</body>
+</html>

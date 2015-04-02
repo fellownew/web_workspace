@@ -1,0 +1,92 @@
+package member.model.dao;
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import member.vo.Member;
+
+import common.util.DataBaseUtil;
+
+public class MemberDAO {
+	private static MemberDAO dao = new MemberDAO();
+	private DataBaseUtil dbUtil = DataBaseUtil.getInstance();
+	
+	private MemberDAO(){}
+	
+	public static MemberDAO getInstance(){
+		return dao;
+	}
+	//회원 가입시 DB에 등록할 메소드.
+	public int insertMember(Member member){
+		Connection conn;
+		PreparedStatement pstmt;
+		String sql="insert into member values(?,?,?,?,?)";
+		int count = 0;
+		try{
+			conn=dbUtil.getConnection();
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, member.getId());
+			pstmt.setString(2, member.getPassword());
+			pstmt.setString(3, member.getName());
+			pstmt.setString(4, member.getEmail());
+			pstmt.setDate(5, new Date(member.getDate().getTime()));
+			count = pstmt.executeUpdate();
+			
+		}catch(SQLException e ){
+			e.printStackTrace();
+		}
+		return count;
+	}
+	//모든 회원 리스트 출력 메소드. ArrayList 리턴.
+	public ArrayList<Member> selectAllMember(){
+		Connection conn;
+		PreparedStatement pstmt;
+		ResultSet rset;
+		String sql="select *from member";
+		ArrayList<Member> members=new ArrayList<>();
+		try{
+			conn = dbUtil.getConnection();
+			pstmt=conn.prepareStatement(sql);
+			rset = pstmt.executeQuery();
+			while(rset.next()){
+				members.add(new Member(rset.getString(1),rset.getString(2),rset.getString(3),rset.getString(4),rset.getDate(5)));
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		return members;
+	}
+	
+	public Member selectMemberById(){
+		Connection conn;
+		PreparedStatement pstmt;
+		Member member = null;
+		String sql="select *from member";
+		ArrayList<Member> members=new ArrayList<>();
+		try{
+			conn = dbUtil.getConnection();
+			pstmt=conn.prepareStatement(sql);
+			rset = pstmt.executeQuery();
+			if(rset.next()){
+				members.add(new Member(rset.getString(1),rset.getString(2),rset.getString(3),rset.getString(4),rset.getDate(5)));
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		return member;
+	}
+	
+	public void updateMember(){
+		
+	}
+	
+	public void deleteMemberById(){
+		
+	}
+	
+	
+}

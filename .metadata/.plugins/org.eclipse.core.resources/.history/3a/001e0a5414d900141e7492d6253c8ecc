@@ -1,0 +1,6 @@
+package member.exception;
+
+public class DuplicationIdException extends Throwable{
+	super();
+	
+}

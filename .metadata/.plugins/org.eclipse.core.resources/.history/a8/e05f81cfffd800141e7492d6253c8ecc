@@ -1,0 +1,30 @@
+package member.controller;
+
+import java.util.Date;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import member.model.dao.MemberDAO;
+import member.model.service.MemberService;
+import member.vo.Member;
+import common.controller.AttributeAndView;
+import common.controller.Controller;
+
+public class RegisterController implements Controller {
+
+	@Override
+	public AttributeAndView handleRequest(HttpServletRequest request,HttpServletResponse response) throws Exception {
+		MemberService ms = MemberService.getInstance();
+		String id = (String) request.getAttribute("id");
+		String password = (String)request.getAttribute("password");
+		String name = (String)request.getAttribute("name");
+		String email = (String)request.getAttribute("email");
+		Date date = new Date();
+		Member registerMember = new Member(id,password,name,email,date);
+		ms.joinMember(registerMember);
+		
+		return new AttributeAndView(false, "/WEB-INF/view/member/register_success.jsp");
+	}
+
+}
