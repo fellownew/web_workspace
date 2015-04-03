@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>MemberManager_team1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- context-param 등록 -->
+  <context-param>
+    <param-name>url</param-name>
+    <param-value>jdbc:oracle:thin:@127.0.0.1:1521:XE</param-value>
+  </context-param>
+  <context-param>
+    <param-name>user</param-name>
+    <param-value>scott</param-value>
+  </context-param>
+  <context-param>
+    <param-name>password</param-name>
+    <param-value>tiger</param-value>
+  </context-param>
+  <!-- 리스너 등록 -->
+  <listener>
+    <listener-class>common.util.BasicDataSourceListener</listener-class>
+  </listener>
+  <!-- 서블릿 등록 -->
+  <!-- frontController -->
+  <servlet>
+  	<servlet-name>front controller</servlet-name>
+  	<servlet-class>common.controller.FrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>front controller</servlet-name>
+  	<url-pattern>/controller</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

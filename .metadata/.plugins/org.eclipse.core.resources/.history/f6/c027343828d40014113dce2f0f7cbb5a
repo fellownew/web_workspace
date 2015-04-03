@@ -1,5 +1,0 @@
-package servlet.vo;
-
-public class Member {
-	private String id,name;
-}

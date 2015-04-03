@@ -51,7 +51,7 @@
 <fullyQualifiedTypeName name="member.model.service.MemberService"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="member.vo.Member"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="java.lang.Throwable"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="member.exception.DuplicationIdException"/>
 </qualifiedTypeNameHistroy>

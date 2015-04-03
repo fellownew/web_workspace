@@ -22,10 +22,12 @@
     <param-name>password</param-name>
     <param-value>tiger</param-value>
   </context-param>
+  
   <!-- 리스너 등록 -->
   <listener>
     <listener-class>common.util.BasicDataSourceListener</listener-class>
   </listener>
+  
   <!-- 서블릿 등록 -->
   <!-- frontController -->
   <servlet>
