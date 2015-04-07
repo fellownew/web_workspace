@@ -1,6 +1,0 @@
-package servlet.vo;
-
-public class Address {
-	private String adderss,zipcode;
-	
-}

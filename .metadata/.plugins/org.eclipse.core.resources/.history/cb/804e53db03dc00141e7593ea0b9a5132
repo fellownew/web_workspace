@@ -1,0 +1,5 @@
+package account.model.service;
+
+public class AccountService {
+
+}

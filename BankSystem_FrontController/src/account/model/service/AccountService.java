@@ -1,0 +1,23 @@
+package account.model.service;
+
+import java.util.ArrayList;
+
+import account.model.dao.AccountDAO;
+import account.vo.Account;
+import common.util.DataBaseUtil;
+
+public class AccountService {
+	private static AccountService inst = new AccountService();
+	private DataBaseUtil dbUtil = DataBaseUtil.getInstance();
+	private AccountDAO dao = AccountDAO.getInstance();
+	
+	public static AccountService getInstance(){
+		return inst;
+	}
+	
+	public ArrayList<Account> accountListById(String id){
+		//id가 가지고 있는 통장 리스트를 리턴.
+		ArrayList<Account> list = new ArrayList<Account>();
+		return list;
+	}
+}

@@ -9,5 +9,9 @@
 <body>
 <h1>회원관리</h1>
 	${sessionScope.login_info }님 안녕하세요
+	<a href="/BankSystem_FrontController/controller?command=accountManager">통장관리</a>
+	<a href="/BankSystem_FrontController/controller?command=link&path=/WEB-INF/view/member/main.jsp">입/출금</a>
+	<a href="/BankSystem_FrontController/controller?command=link&path=/WEB-INF/view/member/main.jsp">송금</a>
+	<a href="/BankSystem_FrontController/controller?command=link&path=/WEB-INF/view/member/main.jsp">대출</a>
 </body>
 </html>

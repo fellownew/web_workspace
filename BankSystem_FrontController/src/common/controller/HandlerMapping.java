@@ -1,5 +1,6 @@
 package common.controller;
 
+import account.controller.AccountManagerController;
 import member.controller.LoginController;
 import member.controller.LoginMemberInfoController;
 import member.controller.LogoutController;
@@ -33,17 +34,20 @@ public class HandlerMapping {
 				//조회 컨트롤러 호출
 				controller = new LoginMemberInfoController();
 			}else if(command.equals("memberAllList")){
-				//조회 컨트롤러 호출
+				//전체조회 컨트롤러 호출
 				controller = new MemberListController();
 			}else if(command.equals("modify")){
-				//조회 컨트롤러 호출
+				//수정 컨트롤러 호출
 				controller = new ModifyFormController();
 			}else if(command.equals("completeModify")){
-				//조회 컨트롤러 호출
+				//수정완료 컨트롤러 호출
 				controller = new ModifyMemberController();
 			}else if(command.equals("removeMember")){
-				//조회 컨트롤러 호출
+				//삭제 컨트롤러 호출
 				controller = new RemoveMemberController();
+			}else if(command.equals("accountManager")){
+				//통장관리 컨트롤러 호출
+				controller = new AccountManagerController();
 			}else if(command.equals("link")){
 				//WEB-INF 내로 링크 걸기 위한 컨트롤러 호출
 				controller = new LinkController();

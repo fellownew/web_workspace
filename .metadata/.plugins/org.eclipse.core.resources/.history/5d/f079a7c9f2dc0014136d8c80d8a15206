@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Function</title>
+	<script type="text/javascript">
+		//한줄 주석 동일함.
+		/*블럭 주석*/
+		//hello1() 함수 선언
+		function hello1(){
+			window.alert("경고창을 띄운다");
+			alert("한국어:안녕\n영어:Hello\n일본어:こんにちは");//window 생략됨.
+		}
+		var hello2 = function(){
+			alert("hello2 !!!!!!!!!!!");
+		}
+		
+	</script>
+
+
+</head>
+<body>
+	<script type="text/javascript">
+		//hello1(); //함수호출
+		
+	
+	</script>
+	
+	<!-- 버튼은 form 태그 내에선 전송버튼, 밖에는 아무런 기능이 없는 일반적인 버튼 -->
+	<button>hello2 호출 버튼</button>
+</body>
+</html>

@@ -7,3 +7,7 @@ create table member(
 )
 
 select *from member
+
+select to_char(sysdate,'yyyy-mm-dd hh-mi-ss') from dual
+select to_char(1235342938498.34,'9,999,999,999,999.000') from dual
+select to_char(to_date(to_char(member_date,'yyyymmdd'),'yyyy-mm-dd hh:mi:ss'),'yyyy-dd-mm') from member

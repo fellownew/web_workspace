@@ -1,4 +1,0 @@
-select department_id,department_name,location from DEPARTMENT
-
-
-select customer_id,customer_pwd from customer where customer_id='id-1'

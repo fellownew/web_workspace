@@ -10,7 +10,6 @@
 <fullyQualifiedTypeName name="java.lang.Runnable"/>
 <fullyQualifiedTypeName name="department.servlet.jdbc.DataBaseUtil"/>
 <fullyQualifiedTypeName name="department.jdbc.DataBaseUtil"/>
-<fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
@@ -18,7 +17,6 @@
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="java.net.URLEncoder"/>
 <fullyQualifiedTypeName name="java.net.URLDecoder"/>
-<fullyQualifiedTypeName name="javax.servlet.Filter"/>
 <fullyQualifiedTypeName name="servlet.vo.Member"/>
 <fullyQualifiedTypeName name="department.vo.Department"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
@@ -26,7 +24,6 @@
 <fullyQualifiedTypeName name="jdbc.CustomerDAO"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="calc.model.service.CalculateService"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 <fullyQualifiedTypeName name="calc.model.dao.CalcResultDAO"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
@@ -34,7 +31,6 @@
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletException"/>
 <fullyQualifiedTypeName name="controller.Controller"/>
-<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="controller.LinkController"/>
 <fullyQualifiedTypeName name="controller.HandlerMapping"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
@@ -49,9 +45,15 @@
 <fullyQualifiedTypeName name="member.model.dao.MemberDAO"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="member.model.service.MemberService"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="member.vo.Member"/>
 <fullyQualifiedTypeName name="java.lang.Throwable"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="member.exception.DuplicationIdException"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+<fullyQualifiedTypeName name="javax.servlet.Filter"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.WebListener"/>
 </qualifiedTypeNameHistroy>
