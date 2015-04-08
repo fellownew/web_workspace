@@ -1,7 +1,0 @@
-package controller;
-//업무 처리 컨트롤러들의 Type을 묶어줄 interface
-public interface Controller {
-	public default void handleRequest(){
-		
-	}
-}

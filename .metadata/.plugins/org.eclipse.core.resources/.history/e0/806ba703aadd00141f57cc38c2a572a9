@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function arrayTest(){
+	var arr = new Array(10);
+
+</script>
+</head>
+<body>
+<button onclick="arrayTest()">배열 테스트</button>
+</body>
+</html>

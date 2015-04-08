@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function idTxtBlur(txt){
+	//event 발생한 input type="text"의 value값(사용자가 입력한 값)을 조회한 뒤 입력폼의 내용을 제거.
+	alert(txt.value);
+	txt.value="";
+}
+function taInitialize(obj){
+	 
+}
+function checkValue(obj){
+	
+}
+</script>
+</head>
+<!-- 페이지가 완성되어 사용자에게  -->
+<body onload="alert('페이지가 로딩됩니다.');">
+
+
+
+<form action="01_basic.html" onsubmit="alert('전송합니다.');">
+
+	Text : <input type="text" name="txt" onfocus="alert('포커스 획득');"  onblur="alert('포커스를 잃음');"><br>
+	<input type="button" value="버튼" onclick="alert('버튼이 클릭되었습니다.');"><br>
+	<!-- event handler에서 this : 이 객체 - 이벤트 소스객체 - 이벤트 발생한 태그 
+	this.속성명(this.name, this,value ) - 이벤트 발생한 태그.속성 - 그 속성의 값을 리턴함.-->
+	<input type="text" value="id : " name="id" onfocus="alert(this.name);alert(this.value);this.value='12345';" onblur="idTxtBlur(this);"><br>
+	
+	<textarea cols="30" rows="5">자기소개 입력</textarea><p>
+	
+	<input type="text" name="txt2"><p>
+	<input type="submit" value="전송" >
+</form>
+</body>
+</html>
