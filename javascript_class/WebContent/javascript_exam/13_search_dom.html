@@ -13,28 +13,28 @@ p - 지정된 영역 전/후로 엔터 두번효과가 들어간다. <br><br>, �
 <script type="text/javascript">
 function findNode(){
 	var in_1_3 = document.getElementById("in_1_3");
-	//var parent = in_1_3.parentNode;//부모 노드(부모 태그) 조회
-	//parent.setAttribute("style", "border-style:dotted;");
+	var parent = in_1_3.parentNode;//부모 노드(부모 태그) 조회
+	parent.setAttribute("style", "border-style:dotted;");//border 스티일 : 점 찍기
 	//dom객체.setAttribute("이름", "값"); dom객체에 속성 추가/변경.(태그 속성추가)
 	
-	//var firstChild = in_1_3.firstChild;//첫번째 자식 노드
-	//alert(in_1_3.nodeName+"-"+firstChild.nodeName);//dom객체.nodeName - 노드의 타입을 문자열로 알려줌.
-	//firstChild.nextSibling.setAttribute("style", "background-color:green");
+	var firstChild = in_1_3.firstChild;//첫번째 자식 노드
+	alert(in_1_3.nodeName+"-"+firstChild.nodeName);//dom객체.nodeName - 노드의 타입을 문자열로 알려줌.
+	firstChild.nextSibling.setAttribute("style", "background-color:green");
 	 
-	//var lastChild = in_1_3.lastChild;//마지막 자식노드
-	//alert(lastChild.nodeName);
-	//lastChild.previousSibling.setAttribute("style", "background-color:pink"); 
+	var lastChild = in_1_3.lastChild;//마지막 자식노드
+	alert(lastChild.nodeName);
+	lastChild.previousSibling.setAttribute("style", "background-color:pink"); 
 	
-	//var in_2_2 = document.getElementById("in_2_2");
-	//var children = in_2_2.children;//하위 노드중 element 노드들만 노드리스트(배열) 리턴
-	//var childNodes = in_2_2.childNodes;//모든 하위노드(element노드, text 노드)들을 노드리스트로 리턴
+	var in_2_2 = document.getElementById("in_2_2");
+	var children = in_2_2.children;//하위 노드중 element 노드들만 노드리스트(배열) 리턴
+	var childNodes = in_2_2.childNodes;//모든 하위노드(element노드, text 노드)들을 노드리스트로 리턴
 	//alert(children.length+" - "+childNodes.length);
-	//children[1].setAttribute("style", "color:red");//color : 전경색 지정
+	children[1].setAttribute("style", "color:red");//color : 전경색 지정
 } 
 </script>
 
 </head>
-
+<!-- 구역을 나누는 태그 div, p, span -->
 <body>
 <div id="root_layer">
 	<div id="in_1_1">1-1</div>
@@ -51,13 +51,6 @@ function findNode(){
 <button onclick="findNode();">findNode() 호출</button>
 </body>
 </html> 
-
-
-
-
-
-
-
 
 
 

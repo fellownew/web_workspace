@@ -1,0 +1,29 @@
+create table account(
+	account_id varchar(30) primary key,
+	account_password varchar(50) not null,
+	amount number(10) not null,
+	account_type varchar(50) not null
+)
+
+create table account_type(
+	type_name varchar(30) primary key,
+	interest number(4,2) not null
+)
+
+create table account_list(
+	customer_id varchar(30) constraint foreign key 
+	account_id varchar(30) constraint foreign key 
+
+)
+
+
+
+
+select *from account
+
+
+
+drop table account_list;
+drop table accoutn_type;
+drop table account;
+drop table customer;

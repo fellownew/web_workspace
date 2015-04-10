@@ -1,15 +1,15 @@
 package common.controller;
 
+import customer.controller.LoginController;
+import customer.controller.LoginCustomerInfoController;
+import customer.controller.LogoutController;
+import customer.controller.CustomerListController;
+import customer.controller.ModifyFormController;
+import customer.controller.ModifyCustomerController;
+import customer.controller.RegisterController;
+import customer.controller.RegisterSuccessController;
+import customer.controller.RemoveCustomerController;
 import account.controller.AccountManagerController;
-import member.controller.LoginController;
-import member.controller.LoginMemberInfoController;
-import member.controller.LogoutController;
-import member.controller.MemberListController;
-import member.controller.ModifyFormController;
-import member.controller.ModifyMemberController;
-import member.controller.RegisterController;
-import member.controller.RegisterSuccessController;
-import member.controller.RemoveMemberController;
 
 public class HandlerMapping {
 	
@@ -32,19 +32,19 @@ public class HandlerMapping {
 				controller = new LogoutController();
 			}else if(command.equals("info")){
 				//조회 컨트롤러 호출
-				controller = new LoginMemberInfoController();
-			}else if(command.equals("memberAllList")){
+				controller = new LoginCustomerInfoController();
+			}else if(command.equals("customerAllList")){
 				//전체조회 컨트롤러 호출
-				controller = new MemberListController();
+				controller = new CustomerListController();
 			}else if(command.equals("modify")){
 				//수정 컨트롤러 호출
 				controller = new ModifyFormController();
 			}else if(command.equals("completeModify")){
 				//수정완료 컨트롤러 호출
-				controller = new ModifyMemberController();
-			}else if(command.equals("removeMember")){
+				controller = new ModifyCustomerController();
+			}else if(command.equals("removeCustomer")){
 				//삭제 컨트롤러 호출
-				controller = new RemoveMemberController();
+				controller = new RemoveCustomerController();
 			}else if(command.equals("accountManager")){
 				//통장관리 컨트롤러 호출
 				controller = new AccountManagerController();

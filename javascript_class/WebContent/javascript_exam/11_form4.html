@@ -5,14 +5,30 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 function selectTest1(){
-	
+	var hpSel = window.document.f1.hp;
+	alert("선택된 item idx : "+hpSel.selectedIndex);//0부터.
+//	alert("하위의 option개수"+hpsel.length);
+	var options = hpSel.options;//옵션 객체[] 
+	//for(var i=0;i<options.length;i++){
+	//	alert(options[i].value+" - "+options[i].text+" - "+options[i].selected);
+	//}
 }
 
 function selectTest2(){
-	
+	//번호가 선택되었으면 전송처리, 번호가 선택 안됐으면 선택하라는 경고를 보여주고 전송하지 않는다.
+	if(document.f1.hp.selectedIndex==0){
+		alert("핸드폰 번호를 입력하세요");
+		return false;
+	}else{
+		alert("번호를 선택했습니다.");
+	}
 }
 function selectTest3(){
-	//번호가 선택되었으면 전송처리, 번호가 선택 안됐으면 선택하라는 경고를 보여주고 전송하지 않는다.
+	var value = document.f1.hp.options[document.f1.hp.selectedIndex].value;
+	alert(value);
+	var value2 = document.f1.hp.value;
+	alert(value2);
+	
 	
 }
 </script>

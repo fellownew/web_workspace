@@ -10,21 +10,97 @@
   select - 1~12 월 중 하나를 선택했는지 체크
   위 조건을 만족하지 않으면 alert()으로 이유를 알려주고 전송하지 않도록 처리.
  --> 
+<script type="text/javascript">
+function send(){
+	var f = document.f1;
+	if(!f.id.value){
+		alert("ID는 필수입력사항입니다.");
+		f.id.focus();
+		return false;
+	}
+	if(!f.password.value){
+		alert("비밀번호는 필수입력사항입니다.");
+		f.password.focus();
+		return false;
+	}
+	if(!f.name.value){
+		alert("이름은 필수입력사항입니다.");
+		f.name.focus();
+		return false;
+	}
+	var flag = false;
+	for(var i=0;i<f.gender.length;i++){
+		if(f.gender[i].checked){
+			flag=true;
+		}
+	}
+	if(!flag){
+		alert("성별을 선택해주세요");
+		return false;
+	}
+
+	if(!f.birth_year.value){
+		alert("태어난 년도를 입력해주세요");
+		
+		f.birth_year.focus();
+		return false;
+	}else if(f.birth_year.value&&isNaN(f.birth_year.value)){
+		alert("태어난 년도는 숫자로 입력해주세요");
+		return false;
+	}
+	if(f.birth_month.selectedIndex==0){
+		alert("태어난 월을 선택해주세요");
+		return false;
+	}
+	if(!f.birth_day.value){
+		alert("태어난 일을 입력해주세요");
+
+		f.birth_day.focus();
+		return false;
+	}else if(isNaN(f.birth_day.value)){
+		alert("태어난 일은 숫자로 입력해주세요");
+		return false;
+	}
+	flag=false;
+	for(var i=0;i<f.lang.length;i++){
+		if(f.lang[i].checked){
+			flag=true;
+		}
+	}
+	if(!flag){
+		alert("관심있는 항목을 하나 이상 체크해주세요");
+		return false;
+	}
+	
+	if(!f.intro.value){
+		alert("내용을 입력해주세요");
+		f.password.focus();
+		return false;
+	}
+	if(!confirm("가입 할까요?")){
+		return false;
+	}
+}
+
+
+
+</script>
+
 
 </head>
 <body>
 <h2>회원 가입폼</h2>
 
-<form action="/myweb/join" method="post" name="f1">
+<form action="/myweb/join" method="post" name="f1" onsubmit="return send();">
 ID : <input type="text" name="id"><br>
 Password : <input type="password" name="password"><br>
 이름 : <input type="text" name="name"><br>
 성별 : 
 <label for="male">남 : </label>
-
 <input type="radio" name="gender" value="남성" id="male">
+<label for="female">여 : </label>
+<input type="radio" name="gender" value="여성" id="female">
 
-<label for="female">여 : </label><input type="radio" name="gender" value="여성" id="female">
 <br>
 생일 : 
 년 <input type="text" name="birth_year" size="5"> 
@@ -61,14 +137,4 @@ Password : <input type="password" name="password"><br>
 </form>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
 

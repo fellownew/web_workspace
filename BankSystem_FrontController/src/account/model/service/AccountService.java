@@ -3,8 +3,9 @@ package account.model.service;
 import java.util.ArrayList;
 
 import account.model.dao.AccountDAO;
-import account.vo.Account;
+
 import common.util.DataBaseUtil;
+import common.vo.Account;
 
 public class AccountService {
 	private static AccountService inst = new AccountService();

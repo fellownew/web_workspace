@@ -56,4 +56,5 @@
 <fullyQualifiedTypeName name="javax.servlet.Filter"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
 <fullyQualifiedTypeName name="javax.servlet.annotation.WebListener"/>
+<fullyQualifiedTypeName name="common.vo.Customer"/>
 </qualifiedTypeNameHistroy>

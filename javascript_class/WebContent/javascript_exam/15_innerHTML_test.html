@@ -5,9 +5,20 @@
 <title>Insert title here</title>
 <script type="text/javascript">
 function innerHTMLTest1(){
-
+//layer1 내의 내용물 조회
+var layer1 = document.getElementById("layer1");
+var txt1 = layer1.innerHTML;
+alert(txt1);
+var txt2 = layer1.innerText;//layer1내의 text 노드만 조회해서 문자열로 리턴.
+alert(txt2);
+var txt3 = layer1.outerHTML;
+alert(txt3);
 }
 function innerHTMLTest2(){
+	//innerHTML을 이용해서 layer2의 자식노드들을 변경함.
+	//innerHTML - 기존내용을 삭제하고 새로운 값을 추가하는 개념.
+	var layer2 = document.getElementById("layer2");
+	layer2.innerHTML = "<b><i>innerhtml이다</i></b><br/><input type='text' name='age'>";
 	
 }
 </script> 
