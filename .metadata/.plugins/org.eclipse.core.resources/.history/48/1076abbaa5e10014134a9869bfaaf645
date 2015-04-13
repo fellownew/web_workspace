@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var xhr;
+function getGreeting(){
+	//XMLHttpRequest를 이용해 Post 요청 처리	
+	var name = document.getElementById("name").value;
+	if(!name){
+		alert("조회할 이름을 넣으세요");
+		return;
+	}
+	//1. XMLHttpRequest 객체를 생성해서 xhr변수에 대입.
+	if(window.ActiveXObject){//IE 구 버전인지 확인
+		xhr = new ActiveXObject("Microsoft.XMLHTTP");
+	}else{
+		xhr = new XMLHttpRequest();	
+	}
+	//2.xhr에 요청 ㅈ어보들을 설정 : http 요청방식 - post, url - /javascript_class/ajax, 비동기 방식
+	xhr.open("POST","/javascript_class/ajax",true);
+	//3. readyState 이벤트 핸들러 추가
+		xhr.onreadystatechange = callback;
+	//4. post 요청일 경우 헤더에 컨텐츠 타입 설정
+	xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+	//5. 
+	xhr.send("cmd=post_hello&name="+name);
+	
+}
+function callback(){
+	if(xhr.readyState == 4){//요청부터 응답까지 상태가 바뀔때마다 0~4를 계속 번갈아가면서 상태를 바꿈
+		//그 중 4는 응답이 완료되었을 경우이다.
+		if(xhr.status == 200){ //응답코드 200이라면 / 즉, 정상적인 응답이라면
+		var txt = xhr.responseText;
+		var font = document.createElement("font");
+		font.setAttribute("color", "blue");
+		font.appendChild(txt);
+		document.getElementById("result_layer").innerHTML = "<b>"+txt+"</b>";
+		
+		}else{
+		alert("문제 발생!"+xhr.stautus);
+		}
+	}
+}
+
+</script>
+</head>
+<body>
+post_hello.html<p>
+이름 : <input type="text" id="name">
+<input type="button"  value="조회" onclick="getGreeting();"><br>
+<div id="result_layer"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

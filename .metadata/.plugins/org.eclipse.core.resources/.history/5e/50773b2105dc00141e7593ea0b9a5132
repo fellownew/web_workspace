@@ -1,9 +1,0 @@
-package account.vo;
-
-public class Account {
-	private String id,password;
-	private int amount;
-	private String type;
-	
-	
-}

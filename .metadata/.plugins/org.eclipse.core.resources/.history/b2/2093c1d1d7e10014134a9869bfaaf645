@@ -1,0 +1,13 @@
+package account.model.dao;
+
+import common.util.DataBaseUtil;
+
+public class AccountDAO {
+private static AccountDAO inst = new AccountDAO();
+private DataBaseUtil dbUtil = DataBaseUtil.getInstance();
+
+public static AccountDAO getInstance(){
+	return inst;
+}
+
+}

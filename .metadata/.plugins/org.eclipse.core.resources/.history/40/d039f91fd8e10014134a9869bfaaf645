@@ -1,0 +1,16 @@
+package common.vo;
+
+import java.io.Serializable;
+
+public class Account implements Serializable{
+	private String accountId;
+	private String password;
+	private long amount;
+	private Type type;
+
+	@Override
+	public String toString() {
+		return "통장 번호 : " + accountId + ", 잔액 : " + amount + type;
+	}
+	
+}

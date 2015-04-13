@@ -16,8 +16,8 @@ public class LoginCustomerInfoController implements Controller {
 	public AttributeAndView handleRequest(HttpServletRequest request,HttpServletResponse response) throws Exception {
 		CustomerService ms = CustomerService.getInstance();
 		HttpSession session = request.getSession();
-		String id = (String) session.getAttribute("login_info");
-		Customer customer = ms.getCustomerById(id);	 // B.L 호출
+		Customer customer = (Customer) session.getAttribute("login_info");
+		customer = ms.getCustomerById(customer.getId());	 // B.L 호출
 		
 		return new AttributeAndView(false, "/WEB-INF/view/customer/customer_info.jsp","info",customer);
 	}

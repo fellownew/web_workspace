@@ -1,6 +1,0 @@
-package account.model.service;
-
-public class AccountService {
-	private static AccountService inst = new AccountService();
-	
-}

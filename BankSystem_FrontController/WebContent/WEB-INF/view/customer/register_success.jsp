@@ -22,13 +22,25 @@
 			<td>${requestScope.info.name }</td>
 		</tr>
 		<tr>
-			<td>이메일</td>
-			<td>${requestScope.info.email }</td>
+			<td>직업</td>
+			<td>${requestScope.info.job }</td>
 		</tr>	
 		<tr>
-			<td>가입일자</td>
-			<td>${requestScope.info.date }</td>
+			<td>나이</td>
+			<td>${requestScope.info.age }</td>
 		</tr>	
+		<tr>
+			<td>성별</td>
+			<td>${requestScope.info.sex?"여성":"남성"}</td>
+		</tr>
+		<tr>
+			<td>전화번호</td>
+			<td>${requestScope.info.phoneNumber }</td>
+		</tr>
+		<tr>
+			<td>주소</td>
+			<td>${requestScope.info.address }</td>
+		</tr>
 	</table>
 	<a href="/BankSystem_FrontController/controller?command=link&path=/WEB-INF/view/member/login_form.jsp">로그인 하기</a>
 </body>

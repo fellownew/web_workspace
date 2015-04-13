@@ -16,8 +16,9 @@ public class ModifyCustomerController implements Controller {
 	public AttributeAndView handleRequest(HttpServletRequest request,HttpServletResponse response) throws Exception {
 		CustomerService ms = CustomerService.getInstance();
 		HttpSession session = request.getSession();
-		String id = (String) session.getAttribute("login_info");
-		Customer customer = ms.getCustomerById(id);
+		Customer customer = (Customer) session.getAttribute("login_info");
+		customer = ms.getCustomerById(customer.getId());
+		session.invalidate();
 		return new AttributeAndView(false, "/WEB-INF/view/customer/customer_info.jsp","info",customer);
 	}
 

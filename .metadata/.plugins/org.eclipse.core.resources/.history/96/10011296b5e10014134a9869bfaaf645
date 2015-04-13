@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var flag = true;
+
+function join(){
+	if(flag){//true이면 전송이 안되도록 처리
+		alert("사용할 수 없는 ID 입니다.");
+		document.getElementById("id").focus();
+		return !flag;
+	}
+	
+
+	
+}	
+
+function callback(){
+	if(xhr.readyState == 4){//요청부터 응답까지 상태가 바뀔때마다 0~4를 계속 번갈아가면서 상태를 바꿈
+		//그 중 4는 응답이 완료되었을 경우이다.
+		if(xhr.status == 200){ //응답코드 200이라면 / 즉, 정상적인 응답이라면
+			//var txt = document.createTextNode(xhr.responseText);
+			var txt = xhr.responseText;
+			if(txt=="중복"){
+				document.getElementById("check_id").innerHTML = "<b>사용중인 아이디입니다.</b>";	
+				flag=true;
+			}else if(txt=="짧아"){
+				document.getElementById("check_id").innerHTML = "<b>아이디는 6글자 이상이어야합니다.</b>";
+				flag=true;
+			}else{
+				document.getElementById("check_id").innerHTML = "사용 가능한 아이디입니다.";
+				flag = false;
+			}
+		}else{
+			alert("문제 발생!"+xhr.stautus);
+		}
+	}
+}
+
+function check(){
+	var id = document.getElementById("id").value;
+
+		if(window.ActiveXObject){//IE 구 버전인지 확인
+			xhr = new ActiveXObject("Microsoft.XMLHTTP");
+		}else{
+			xhr = new XMLHttpRequest();	
+		}
+		xhr.open("POST","/javascript_class/ajax",true);	
+		xhr.onreadystatechange = callback;	
+		xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+		xhr.send("cmd=idCheck&id="+id);
+	
+}
+
+</script>
+</head>
+<body>
+<form name="f1" method="post" action="join" onsubmit="return join()">
+ID : <input type="text" name="id" id="id" onkeyup="check()"> <span id="check_id"></span><br>
+password : <input type="password" name="password" id="password"><br>
+가입 양식<p>
+<input type="submit" value="가입">
+</form>
+</body>
+</html>

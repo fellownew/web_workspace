@@ -1,13 +1,13 @@
 package customer.model.dao;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 import common.util.DataBaseUtil;
+import common.vo.Account;
 import common.vo.Customer;
 
 public class CustomerDAO {
@@ -23,13 +23,22 @@ public class CustomerDAO {
 	public void insertCustomer(Customer customer){
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		String sql="insert into member values(?,?,?,?,?)";
+		String sql="insert into customer values(?,?,?,?,?,?,?,?,?,?)";
+
 		try{
 			conn=dbUtil.getConnection();
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, customer.getId());
 			pstmt.setString(2, customer.getPassword());
 			pstmt.setString(3, customer.getName());
+			pstmt.setObject(4,null);
+			pstmt.setInt(5, customer.getCreditRating());
+			pstmt.setString(6, customer.getJob());
+			pstmt.setInt(7, customer.getAge());
+			pstmt.setBoolean(8, customer.isSex());
+			pstmt.setString(9, customer.getPhoneNumber());
+			pstmt.setString(10, customer.getAddress());
+			
 			pstmt.executeUpdate();
 			
 		}catch(SQLException e ){
@@ -49,14 +58,14 @@ public class CustomerDAO {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		String sql="select *from member";
-		ArrayList<Customer> members=new ArrayList<>();
+		String sql="select *from customer";
+		ArrayList<Customer> customers=new ArrayList<>();
 		try{
 			conn = dbUtil.getConnection();
 			pstmt=conn.prepareStatement(sql);
 			rset = pstmt.executeQuery();
 			while(rset.next()){
-//				members.add(new Customer(rset.getString(1),rset.getString(2),rset.getString(3),rset.getString(4),rset.getDate(5)));
+				customers.add(new Customer(rset.getString(1),rset.getString(2),rset.getString(3),(ArrayList<Account>)rset.getObject(4),rset.getInt(5),rset.getString(6),rset.getInt(7),rset.getBoolean(8),rset.getString(9),rset.getString(10)));
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -69,22 +78,22 @@ public class CustomerDAO {
 				e.printStackTrace();
 			}
 		}
-		return members;
+		return customers;
 	}
 	
 	public Customer selectCustomerById(String id){
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		Customer member = null;
-		String sql="select member_id,member_pwd,member_name,member_email,member_date from member where member_id=?";
+		Customer customer = null;
+		String sql="select *from customer where customer_id=?";
 		try{
 			conn = dbUtil.getConnection();
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			rset = pstmt.executeQuery();
 			if(rset.next()){
-//				member =new Customer(rset.getString(1),rset.getString(2),rset.getString(3),rset.getString(4),rset.getDate(5));
+				customer = new Customer(rset.getString(1),rset.getString(2),rset.getString(3),(ArrayList<Account>)rset.getObject(4),rset.getInt(5),rset.getString(6),rset.getInt(7),rset.getBoolean(8),rset.getString(9),rset.getString(10));
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -97,20 +106,25 @@ public class CustomerDAO {
 				e.printStackTrace();
 			}
 		}
-		return member;
+		return customer;
 	}
 	
 	public int updateCustomer(Customer customer){
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		String sql="update member set member_pwd=?,member_name=?,member_email=? where member_id=?";
+		String sql="update customer set customer_password=?,customer_name=?,customer_job=?,customer_age=?,customer_sex=?,customer_phoneNumber=?,customer_address =? where customer_id=?";
 		int count = 0;
 		try{
 			conn=dbUtil.getConnection();
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, customer.getPassword());
 			pstmt.setString(2, customer.getName());
-			pstmt.setString(4, customer.getId());
+			pstmt.setString(3, customer.getJob());
+			pstmt.setInt(4, customer.getAge());
+			pstmt.setBoolean(5, customer.isSex());
+			pstmt.setString(6, customer.getPhoneNumber());
+			pstmt.setString(7, customer.getAddress());
+			pstmt.setString(8, customer.getId());
 			count = pstmt.executeUpdate();
 			
 		}catch(SQLException e ){
@@ -130,7 +144,7 @@ public class CustomerDAO {
 	public void deleteCustomerById(String id){
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		String sql="delete from member where member_id=?";
+		String sql="delete from customer where customer_id=?";
 		try{
 			conn = dbUtil.getConnection();
 			pstmt=conn.prepareStatement(sql);

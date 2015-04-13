@@ -22,15 +22,29 @@
 			<td>${requestScope.info.name }</td>
 		</tr>
 		<tr>
-			<td>이메일</td>
-			<td>${requestScope.info.email }</td>
+			<td>직업</td>
+			<td>${requestScope.info.job }</td>
 		</tr>	
 		<tr>
-			<td>가입일자</td>
-			<td>${requestScope.info.date }</td>
+			<td>나이</td>
+			<td>${requestScope.info.age }</td>
+		</tr>	
+		<tr>
+			<td>성별</td>
+			<td>${requestScope.info.sex?"여성":"남성"}</td>
+		</tr>
+		<tr>
+			<td>전화번호</td>
+			<td>${requestScope.info.phoneNumber }</td>
+		</tr>
+		<tr>
+			<td>주소</td>
+			<td>${requestScope.info.address }</td>
 		</tr>	
 	</table>
-	<a href="/BankSystem_FrontController/controller?command=link&path=/WEB-INF/view/member/modify_form.jsp">회원정보 수정</a>
-	<a href="/BankSystem_FrontController/controller?command=removeMember">회원탈퇴</a>
+	<c:if test="${not empty sessionScope.login_info }">
+		<a href="/BankSystem_FrontController/controller?command=link&path=/WEB-INF/view/member/modify_form.jsp">회원정보 수정</a>
+		<a href="/BankSystem_FrontController/controller?command=removeCustomer">회원탈퇴</a>
+	</c:if>
 </body>
 </html>

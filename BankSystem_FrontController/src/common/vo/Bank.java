@@ -1,6 +1,8 @@
 package common.vo;
 
-public class Bank {
+import java.io.Serializable;
+
+public class Bank implements Serializable{
 	private long amount;
 
 	public Bank(long amount) {

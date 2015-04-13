@@ -1,8 +1,9 @@
 package common.vo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Customer {
+public class Customer implements Serializable{
 	private String id,password,name;
 	private ArrayList<Account> account;
 	private int creditRating; //신용등급
@@ -10,8 +11,7 @@ public class Customer {
 	private int age;
 	private boolean sex;
 	private String phoneNumber,address;
-	public Customer(String id, String password, String name,
-			ArrayList<Account> account, int creditRating, String job, int age,
+	public Customer(String id, String password, String name,ArrayList<Account> account, int creditRating, String job, int age,
 			boolean sex, String phoneNumber, String address) {
 		super();
 		this.id = id;
@@ -31,6 +31,19 @@ public class Customer {
 		this.password = password;
 		this.name = name;
 		this.creditRating = creditRating;
+		this.job = job;
+		this.age = age;
+		this.sex = sex;
+		this.phoneNumber = phoneNumber;
+		this.address = address;
+	}
+	
+	public Customer(String id, String password, String name, String job,
+			int age, boolean sex, String phoneNumber, String address) {
+		super();
+		this.id = id;
+		this.password = password;
+		this.name = name;
 		this.job = job;
 		this.age = age;
 		this.sex = sex;

@@ -25,10 +25,10 @@ public class RegisterController implements Controller {
 		String phoneNumber = request.getParameter("phoneNumber");
 		String address = request.getParameter("address");
 		
-		Customer registerMember = new Customer(id,password,name,9,job,age,sex,phoneNumber,address);
+		Customer registerCustomer = new Customer(id,password,name,9,job,age,sex,phoneNumber,address);
 		String url = "";
 		try {
-			ms.joinCustomer(registerMember);
+			ms.joinCustomer(registerCustomer);
 			url = "/BankSystem_FrontController/controller?command=registerSuccess";
 			HttpSession session = request.getSession();
 			session.setAttribute("registerSuccess", id);

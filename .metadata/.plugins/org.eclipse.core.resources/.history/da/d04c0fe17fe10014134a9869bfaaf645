@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function getGreeting(){
+	//1. 전송할 이름을 조회.
+	var name = document.getElementById("name").value;
+	if(!name){
+		alert("이름을 입력하세요");
+		return;
+	}
+	//비동기적 요청 처리
+	//2. XMLHttpRequest 객체 생성, 전역변수 xhr에 할당.
+	//XMLHttpRequest : JavaScript에서 서버단에 요청과 응답을 관리하는 객체.
+	if(window.ActiveXObject){//IE 구 버전인지 확인
+		xhr = new ActiveXObject("Microsoft.XMLHTTP");
+	}else{
+		xhr = new XMLHttpRequest();	
+	}
+	//3.xhr.open() 호출 - 요청시 필요한 정보(요청할 url, 동기/비동기 요청)을 xhr에 설정
+	
+}
+
+</script>
+</head>
+<body>
+<p>
+이름 : <input type="text" id="name">
+<input type="button"  value="조회" onclick="getGreeting();"><br>
+<div id="result_layer"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

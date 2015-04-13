@@ -18,7 +18,7 @@ public class CustomerListController implements Controller {
 		CustomerService ms = CustomerService.getInstance();
 		ArrayList<Customer> customers = ms.getCustomerList();
 		
-		return new AttributeAndView(false, "/WEB-INF/view/customer/ㅊustomer_list.jsp","customers",customers);
+		return new AttributeAndView(false, "/WEB-INF/view/customer/customer_list.jsp","customers",customers);
 	}
 
 }

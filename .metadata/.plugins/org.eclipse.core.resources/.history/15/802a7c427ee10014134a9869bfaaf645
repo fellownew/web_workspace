@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function getGreeting(){
+	//1. 전송할 이름을 조회.
+	var name = document.name.value;
+	
+	
+	
+}
+
+</script>
+</head>
+<body>
+<p>
+이름 : <input type="text" id="name">
+<input type="button"  value="조회" onclick="getGreeting();"><br>
+<div id="result_layer"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

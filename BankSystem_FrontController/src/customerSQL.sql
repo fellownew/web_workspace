@@ -2,7 +2,7 @@ create table customer(
 	customer_id varchar(30) primary key,
 	customer_password varchar(50) not null,
 	customer_name varchar(30) not null,
-	customer_account varchar(30),
+	customer_account CLOB,
 	customer_creditRating varchar(30) not null,
 	customer_job varchar(20) not null,
 	customer_age number(3) not null,
@@ -11,7 +11,7 @@ create table customer(
 	customer_address varchar(50) not null
 )
 
-select *from customer
+select *from customer where customer_id='id-1'
 
 
 

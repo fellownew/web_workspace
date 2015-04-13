@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var xhr;
+function calc(op){
+	var operand1 = document.getElementById("operand1").value;
+	var operand2 = document.getElementById("operand2").value;
+	if(!operand1||!operand2){
+		alert("빈칸은 안됩니다.");
+		return;
+	}else if(isNaN(operand1)||isNaN(operand2)){
+		alert("숫자를 넣으세요");
+		return;
+	}	
+	if(window.ActiveXObject){//IE 구 버전인지 확인
+		xhr = new ActiveXObject("Microsoft.XMLHTTP");
+	}else{
+		xhr = new XMLHttpRequest();	
+	}	
+	xhr.open("POST","/javascript_class/ajax",true);	
+	xhr.onreadystatechange = callback;	
+	xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+	if(op=="plus"){
+		plus();
+	}else if(op=="reduce"){
+		
+	}else if(op=="div"){
+		
+	}else if(op=="multi"){
+	
+}
+}
+function plus(){
+	xhr.send("cmd=plus&operand1="+operand1+"&operand2="+operand2+"&operator=plus");
+}
+function reduce(){
+	xhr.send("cmd=plus&operand1="+operand1+"&operand2="+operand2+"&operator=reduce");
+}
+function div(){
+	xhr.send("cmd=plus&operand1="+operand1+"&operand2="+operand2+"&operator=div");
+}
+function multi(){
+	xhr.send("cmd=plus&operand1="+operand1+"&operand2="+operand2+"&operator=multi");
+}
+
+function callback(){
+	if(xhr.readyState == 4){//요청부터 응답까지 상태가 바뀔때마다 0~4를 계속 번갈아가면서 상태를 바꿈
+		//그 중 4는 응답이 완료되었을 경우이다.
+		if(xhr.status == 200){ //응답코드 200이라면 / 즉, 정상적인 응답이라면
+		var txt = document.createTextNode(xhr.responseText);
+		var font = document.createElement("font");
+		font.setAttribute("size", "20");
+		font.appendChild(txt);
+		document.getElementById("result_layer").appendChild(font);
+		document.getElementById("result_layer").appendChild(document.createElement('br'));
+		
+		}else{
+		alert("문제 발생!"+xhr.stautus);
+		}
+	}
+}
+
+</script>
+</head>
+<body>
+<p>
+<input type="text" name="operand1" id="operand1">+
+<input type="text" name="operand2" id="operand2">
+<br/><input type="button"  value="더하기" onclick="calc(plus);">
+<br/><input type="button"  value="뻐기" onclick="calc(reduce);">
+<br/><input type="button"  value="나누기" onclick="calc(div);">
+<br/><input type="button"  value="곱하기" onclick="calc(multi);">
+</p>
+<div id="result_layer"></div>
+</body>
+</html>

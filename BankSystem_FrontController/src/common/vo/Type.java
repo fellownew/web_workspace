@@ -1,6 +1,8 @@
 package common.vo;
 
-public class Type {
+import java.io.Serializable;
+
+public class Type implements Serializable{
 	private String typeName;
 	private double interest;
 	public Type(String typeName, double interest) {

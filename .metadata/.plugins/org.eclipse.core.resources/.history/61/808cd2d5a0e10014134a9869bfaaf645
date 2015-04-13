@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var xhr;
+function getGreeting(){
+	//XMLHttpRequest를 이용해 Post 요청 처리	
+	var name = document.getElementById("name").value;
+	if(!name){
+		alert("조회할 이름을 넣으세요");
+		return;
+	}
+	//1. XMLHttpRequest 객체를 생성해서 xhr변수에 대입.
+	if(window.ActiveXObject){//IE 구 버전인지 확인
+		xhr = new ActiveXObject("Microsoft.XMLHTTP");
+	}else{
+		xhr = new XMLHttpRequest();	
+	}
+	
+	xhr.open();
+	
+	
+	
+}
+
+</script>
+</head>
+<body>
+post_hello.html<p>
+이름 : <input type="text" id="name">
+<input type="button"  value="조회" onclick="getGreeting();"><br>
+<div id="result_layer"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

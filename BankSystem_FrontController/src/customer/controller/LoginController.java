@@ -20,8 +20,8 @@ public class LoginController implements Controller {
 		Customer customer = new Customer(id,password);
 		boolean login = ms.loginCustomer(customer); // B.L 호출
 		if(login){
+			customer = ms.getCustomerById(id);
 			HttpSession session = request.getSession();
-			//TODO 해당 customer 전체 정보 가져와서 넣기.
 			session.setAttribute("login_info", customer);
 			url = "/WEB-INF/view/customer/main.jsp";
 		}else{
