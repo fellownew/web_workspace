@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.cls{
+	border-style: none;
+}
+table{
+	width: 500px;
+	border-collapse: collapse;
+}
+table, td, th{
+	border: 1px solid black;
+}
+</style>
+<script type="text/javascript">
+function javascriptObject(){
+	var student ={
+			name:"홍길동",
+			age:20,
+			height:176.8,
+			hobby:["게임","스포츠","자전거"],
+			study:function(){
+				alert(this.name+"공부합니다.");//메소드에서 객체의 property(attribute)접근시 this 이용
+			}
+	}
+}
+
+function getMember(){
+	var member = {"id":"id-1",name:"홍길동",address:"경기도 성남시 분당구 삼평동"};
+	document.getElementById("id").value = member.id;
+	document.getElementById("name").value = member.name;
+	document.getElementById("address").value = member.address;
+	
+}
+function getIds(){
+	var ids = ["id-1","id-2","id-3","id-4","id-5"];
+	var idSel = document.getElementById("ids");
+	while(idSel.hasChildNodes()){
+		idSel.removeChild(idSel.firstChild);
+	}
+	idSel[0]=new Option("아이디를 선택하세요");
+	for(var i = 0; i< ids.length;i++){
+		idSel[i+1]=new Option(ids[i]);
+	}
+}
+
+function getIds2(){
+	var ids = {ids:["id-a","id-b","id-c","id-d","id-e","id-f","id-g"]};
+	var idSel = document.getElementById("ids");
+	for(var i = 0;i<ids.ids.length;i++){
+		idSel[i+1]=new Option(ids.ids[i]);
+	}
+}
+
+function getAllMembers(){2
+	var list = [{id:"id-1",name:"김철수",age:20},
+	            {id:"id-2",name:"홍길동",age:30},
+	            {id:"id-3",name:"임꺽정",age:25},
+	            {id:"id-4",name:"장길산",age:26},
+	            {id:"id-5",name:"박영희",age:25}];
+	var tbody = document.getElementById("tbody");
+	//tbody에 리스트에 있는 내용들을 추가.
+	for(var i = 0;i<list.length;i++){
+		var tr = document.createElement("tr");
+		var td1 = document.createElement("td");
+		var td2 = document.createElement("td");
+		var td3 = document.createElement("td");
+		var txt = document.createTextNode(tr+td1+list[i].id+td2+list[i].name+td3+list[i].age)
+		
+	}
+		
+}	
+function getAllMembers2(){
+
+}
+</script>
+</head>
+<body>
+ID : <input type="text" name="id" id="id" class="cls" readonly="readonly"><br>
+이름 : <input type="text" name="name" id="name" class="cls" readonly="readonly"><br>
+주소 : <input type="text" name="address" id="address" size="50" class="cls" readonly="readonly"><br>
+<input type="button" value="회원정보조회" onclick="getMember()"><br>
+
+<select id="ids">
+	<option>ID들을 선택하세요</option>
+</select>
+<input type="button" value="ID들 조회" onclick="getIds()">
+<input type="button" value="ID들 조회2" onclick="getIds2()"><p>
+<table>
+	<thead>
+		<tr>
+			<td>ID</td>
+			<td>이름</td>
+			<td>나이</td>
+		</tr>
+	</thead>
+	<tbody id="tbody"></tbody>
+	<tfoot>
+		<tr>
+			<td colspan="3" align="center">
+				<input type="button" value="회원목록조회" onclick="getAllMembers()">
+				<input type="button" value="회원목록조회-innerHTML" onclick="getAllMembers2()">
+			</td>
+		</tr>
+	</tfoot>
+</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

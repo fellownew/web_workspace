@@ -1,0 +1,14 @@
+package json;
+
+import org.json.JSONObject;
+
+public class TestOrgJson {
+	public static void test1(){
+		//JSONObject에 직접 name-value를 하나씩 추가함.
+		JSONObject obj = new JSONObject();
+		obj.put("id", "김철수");
+	}
+	public static void main(String[] args) {
+		
+	}
+}
