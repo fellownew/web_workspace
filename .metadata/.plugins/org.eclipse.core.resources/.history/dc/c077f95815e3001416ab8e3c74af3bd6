@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function getMemberById(){
+	if(window.ActiveXObject){
+		xhr = new ActiveXObject("Microsoft.XMLHTTP");
+	}else{
+		xhr = new XMLHttpRequest();
+	}
+	xhr.open("POST","/javascript_class/json",true);
+	xhr.onreadystatechange = callback;
+	xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+	var searchId = document.getElementById("searchId").value;
+	xhr.send("cmd=searchMemberById&id="+searchId);
+}
+
+function callback(){
+	if(xhr.readyState == 4){
+		if(xhr.status == 200){
+			var txt = xhr.responseText;
+			//넘어온 값이 text 이기때문에 JSON으로 변경해줌.
+			var member = JSON.parse(txt);
+			document.getElementById("id").value = member.id;
+			document.getElementById("name").value = member.name;
+			document.getElementById("email").value = member.email;
+			document.getElementById("mileage").value = member.mileage;
+			document.getElementById("marriage").value = member.marriage;
+		}else{
+			alert("문제 발생!"+xhr.stautus);
+		}
+	}	
+}
+
+
+</script>
+<style type="text/css">
+.cls{
+	border-style: none;
+}
+</style>
+</head>
+<body>
+<input type="text" id="searchId">
+<input type="button" value="회원정보조회" onclick="getMemberById();"><p>
+ID : <input type="text" id="id" class="cls" readonly="readonly"><br>
+이름 : <input type="text" id="name"  class="cls" readonly="readonly"><br>
+이메일 : <input type="text" id="email"  class="cls" readonly="readonly"><br>
+마일리지 : <input type="text" id="mileage"  class="cls" readonly="readonly"><br>
+결혼여부 : <input type="text" id="marriage" class="cls" readonly="readonly">
+<hr>
+</body>
+</html>

@@ -1,0 +1,63 @@
+package json.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.json.JSONObject;
+
+import json.vo.Member;
+
+@WebServlet("/json")
+public class JSONServlet extends HttpServlet{
+
+	@Override
+	public void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+		doPost(request,response);
+	}
+
+	@Override
+	public void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		String cmd = request.getParameter("cmd");
+	
+		if(cmd.equals("searchMemberById")){
+			searchMemberById(request,response);
+
+		}
+	}
+	public void searchMemberById(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+		ArrayList<Member> list = new ArrayList<Member>();
+		list.add(new Member("id-1","홍길동","hong@gmail.com",23000,false));
+		list.add(new Member("id-2","임꺽정","lim@gmail.com",15000,false));
+		list.add(new Member("id-3","장길산","jang@gmail.com",26000,false));
+		list.add(new Member("id-4","김철수","kim@gmail.com",35000,true));
+		list.add(new Member("id-5","박영희","bark@gmail.com",11000,true));
+		list.add(new Member("id-6","최대박","choi@gmail.com",1000,true));
+		//요청 파라미터 조회
+		String id = request.getParameter("id").trim();
+		//비지니스 로직 처리.
+//		Member result = new Member(id,"최대박","choi@gmail.com",1000,true);
+		response.setContentType("text/html;charSet=UTF-8");
+		PrintWriter out = response.getWriter();
+//		JSONObject obj = new JSONObject(result);
+		
+		JSONObject obj = null;		
+		for(Member member:list){
+			if(id.equals(member.getId())){
+				obj = new JSONObject(member);
+				out.print(obj);
+			}
+		}
+		if(obj==null){
+			obj = new JSONObject(new Member());
+			out.print(obj);			
+		}
+	}
+}

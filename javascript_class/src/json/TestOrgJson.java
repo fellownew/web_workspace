@@ -55,7 +55,8 @@ public class TestOrgJson {
 		list.add(c1);
 		list.add(c2);
 		list.add(c3);
-		System.out.println(list);
+		JSONArray arr = new JSONArray(list);
+		System.out.println(arr);
 	}
 	public static void main(String[] args) throws JSONException {
 		test1();
