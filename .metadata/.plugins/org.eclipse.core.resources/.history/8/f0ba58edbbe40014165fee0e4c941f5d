@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="/jQuery_class/jquery.js"></script>
+<script type="text/javascript">
+var idx = 1;
+	$(document).ready(function(){
+		$(":checkbox").on("click",function(){     //모든 checkbox 앞에 * 생략.
+			alert("체크박스 클릭 : "+this.value);
+		});
+		$("#btn").on("click",function(){
+			var txt = "<input type='checkbox' value='생성된 checkbox :'"+(idx++)+"'>";
+			document.getElementById("btn_layer").innerHTML = "2번 체크박스"+txt;
+		});
+		
+		$("#bin_layer").on("click",":checkbox",function(){
+			
+		})
+	});
+
+
+
+</script>
+
+</head>
+<body>
+체크박스 : <input type="checkbox" value="1번 체크박스" name="chk">
+<input type="button" value="체크박스 생성" id="btn">
+<div id="btn_layer"></div>
+</body>
+</html>
+
+
+
+
+
+

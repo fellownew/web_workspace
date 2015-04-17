@@ -3,7 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <title>filter_selector</title>
+<script type="text/javascript" src="/jQuery_class/jquery.js"></script>
+<script type="text/javascript">
+function selectorTest(){
+//	$("tr:first").css("background-color","red");
+//	$("tr:last").css("background-color","gold");
+//	$("tr:first-child").css("background-color","pink");
+//	$("tr:last-child").css("background-color","skyblue");
+	
+	$("#memberTb tr:even").css("background-color","gray"); //짝수 번째 0부터 시작.
+	$("#memberTb tr:odd").css("background-color","orange"); // 홀수
+	$("#memberTb tr:eq(2)").css("color","blue");//id가 memberTb인 노드의 자손 노드중에 2번 index의 tr
+	$("#memberTb tr:lt(2)").css("font-weight","bold");//2번 index보다 작은 index의 값
+	$("#memberTb tr:gt(2)").css("text-decoration","underline");//2번 index보다 큰 index의 값
+	
+	$("#productTb td:nth-child(3)").css("background-color","hotpink"); //x번째 자식 노드인 노드객체. 1부터 시작
+	$("#productTb td:nth-child(2n)").css("background-color","cyan"); //n을 붙임으로 2의 배수.
+	//3n+1, even, odd 사용 가능.
+}
 
+function getTxt(){
+	var txt = $("#txt").val();//$("셀렉터") -> 이것은 jQuery 객체를 리턴하기에 val()을 이용함.
+	$("td").css("color","black");
+	$("td:contains('"+txt+"')").css("color","red");	
+	
+	
+	
+}
+
+
+</script>
 <style type="text/css">
 table{
 	width: 500px;
@@ -15,6 +44,7 @@ table,td,th{
 </style>
 </head>
 <body>
+	<button onclick="selectorTest()">selectorText</button>
 	<input type="text" id="txt"><input type="button" value="조회" onclick="getTxt()"><p>
 	<table  id="memberTb" >
 		<tr>

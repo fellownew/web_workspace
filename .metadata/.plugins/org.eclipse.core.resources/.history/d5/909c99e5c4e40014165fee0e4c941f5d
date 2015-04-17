@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="/jQuery_class/jquery.js"></script>
+<script type="text/javascript">
+		/* 특정 노드를 동적으로 나타나게/사라지게 하는 jQuery 메소드
+		show()/hide() - toggle()
+		fadaIn()/fadeOut() - fadeToggle()
+		slideDown()/slideUp() - slideToggle()
+		매개변수 (모두 생략 가능) : 1. 숫자 - 밀리초(나타나고사라지는데 걸리는 시간)
+									2. 함수 - 나타나거나 사라지는 것이 완료된 후 호출될 callback 함수
+		*/
+	$(document).ready(function(){
+		//show()/hide() - toggle()
+		$("#hideBtn").on("click",function(){
+			$("img").hide(3000);
+		});		
+		$("#showBtn").on("click",function(){
+			$("img").show(3000,function(){
+			});
+		});
+		$("#toggleBtn").on("click",function(){
+			$("img").toggle(2000);
+		});
+		//fadaIn()/fadeOut() - fadeToggle()
+		$("#fadeOutBtn").on("click",function(){
+			$("img").fadeOut(3000);
+		});		
+		$("#fadeInBtn").on("click",function(){
+			$("img").fadeIn(3000,function(){
+			});
+		});
+		$("#fadetoggleBtn").on("click",function(){
+			$("img").fadeToggle(2000);
+		});
+		//slideDown()/slideUp() - slideToggle()
+		$("#slideDownBtn").on("click",function(){
+			$("img").slideDown(3000);
+		});		
+		$("#slideUpBtn").on("click",function(){
+			$("img").slideUp(3000,function(){
+			});
+		});
+		$("#slidetoggleBtn").on("click",function(){
+			$("img").slideToggle(2000);
+		});
+	});
+
+
+</script>
+
+</head>
+<body>
+녹차<br>
+<input type="button" id="hideBtn" value="hide">
+<input type="button" id="showBtn" value="show">
+<input type="button" id="toggleBtn" value="toggle">
+<br/>
+<input type="button" id="fadeInBtn" value="fadeIn">
+<input type="button" id="fadeOutBtn" value="fadeOut">
+<input type="button" id="fadetoggleBtn" value="fadeToggle">
+<br/>
+<input type="button" id="slideDownBtn" value="slideDown">
+<input type="button" id="slideUpBtn" value="slideUp">
+<input type="button" id="slidetoggleBtn" value="slideToggle">
+<p>
+<div id="description">
+	녹차는 건강에 좋은 차입니다. <br>
+	저희는 보성에서 재배된 유기농 녹차를 사용합니다.
+	<br>
+	<img alt="김홍도 씨름" src="pic.jpg">
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

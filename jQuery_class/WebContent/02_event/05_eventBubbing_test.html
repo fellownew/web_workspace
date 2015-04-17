@@ -16,6 +16,26 @@ height:200px;
 background:blue;
 }
 </style>
+<script type="text/javascript" src="/jQuery_class/jquery.js"></script>
+<script type="text/javascript">
+//event bubbling을 막기 위해서는 event객체.stopPropagation();을 사용해야한다.
+
+	$(document).ready(function(){
+		$("#grand_parent").on("click",function(){
+			alert("grand_parent 실행");
+		});
+		$("#parent").on("click",function(){
+			alert("parent 실행");
+		});
+		$("#child").on("click",function(evt){
+			alert("child 실행");
+			evt.stopPropagation();
+		});
+	});
+
+
+</script>
+
 </head>
 <body>
 <div id="grand_parent"  style="width:500px;height:500px;background:green">
