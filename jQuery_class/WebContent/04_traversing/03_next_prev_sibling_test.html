@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="/jQuery_class/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//$(".third-item").css("background-color","orange").next().css("background-color","brown").end().prev().css("background-color","olive");	
+	//$(".third-item").nextAll().css("text-decoration","underline");
+	$(".third-item").nextAll(".a").css({"text-decoration":"underline","font-weight":"bold","color":"green"}).end().prevAll().css("color","red").end().siblings().css("background-color","olive");
+	
+});
 
+</script>
 
 </head>
 <body>

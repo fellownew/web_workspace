@@ -3,7 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="/jQuery_class/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("input[name='allcheck']").on("click",function(){
+		flag = this.checked;
+			$("input[name='menu']").each(function(){
+				this.checked = flag;
+			});
+	});
+});
 
+
+</script>
 
 </head>
 <body>

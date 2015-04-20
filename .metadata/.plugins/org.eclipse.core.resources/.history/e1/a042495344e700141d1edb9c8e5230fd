@@ -1,0 +1,23 @@
+package account.controller;
+
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import account.model.service.AccountService;
+import common.controller.AttributeAndView;
+import common.controller.Controller;
+import common.vo.String;
+
+public class AccountManagerController implements Controller {
+
+	@Override
+	public AttributeAndView handleRequest(HttpServletRequest request,HttpServletResponse response) throws Exception {
+		AccountService ac = AccountService.getInstance();
+		ArrayList<String> list = new ArrayList<String>();
+		
+		return new AttributeAndView(false, "/WEB-INF/view/account/account_manager.jsp","accountList",list);
+	}
+
+}

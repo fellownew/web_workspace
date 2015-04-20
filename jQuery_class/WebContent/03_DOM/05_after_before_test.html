@@ -3,7 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="/jQuery_class/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#afterBtn").on("click", function(){
+		$("#child3").after("<font size='2' color='green'>after 추가</font>");
+		$("<font size='4' color='pink'>insertAfter 추가</font>").insertAfter("#child1");
+	});
+	$("#beforeBtn").on("click", function(){
+		$("#child3").before("<font size='3' color='red'>after 추가</font>");
+		$("<font size='1' color='grey'>insertAfter 추가</font>").insertBefore("#child1");
+	});
+	$("#allBtn").on("click",function(){
+		$(".child").before("<font color='skyblue'>추가 됨</font>");
+		
+	});
+});
 
+
+
+</script>
 
 </head>
 <body>

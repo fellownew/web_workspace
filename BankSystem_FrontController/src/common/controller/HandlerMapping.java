@@ -10,6 +10,7 @@ import customer.controller.RegisterController;
 import customer.controller.RegisterSuccessController;
 import customer.controller.RemoveCustomerController;
 import account.controller.AccountManagerController;
+import account.controller.CreateAccountController;
 
 public class HandlerMapping {
 	
@@ -48,6 +49,12 @@ public class HandlerMapping {
 			}else if(command.equals("accountManager")){
 				//통장관리 컨트롤러 호출
 				controller = new AccountManagerController();
+			}else if(command.equals("accountManager")){
+				//통장생성 컨트롤러 호출
+				controller = new CreateAccountController();
+			}else if(command.equals("createAccount")){
+				//통장생성 컨트롤러 호출
+				controller = new CreateAccountController();
 			}else if(command.equals("link")){
 				//WEB-INF 내로 링크 걸기 위한 컨트롤러 호출
 				controller = new LinkController();

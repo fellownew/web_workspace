@@ -3,7 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="/jQuery_class/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#appendBtn").on("click",function(){
+			$("#source").append("<font color='red'>추가내용</font>");
+			$("<font color='blue'>안녕하세요.</font>").appendTo("#target");
+	});
+	$("#prependBtn").on("click",function(){
+		$("#source").prepend("<font color='green'>추가내용</font>");
+		$("<font color='pink'>반갑습니다.</font>").prependTo("#target");
+	});
+	
+	$("#moveBtn").on("click",function(){
+		$("#source").appendTo("#target");
+		$("#source").append($("#target"));
+	});
+	$("#clearBtn").on("click",function(){
+		//$("#tbody").remove(); //id가 tbody인 노드를 삭제하라.
+		$("#tbody").empty(); //id가 tbody인 노드의 모든 자식노드는 삭제하라. ( 자기자신은 살아있음. )
+	});
+});
 
+
+
+
+</script>
 </head>
 <body>
 <fieldset>

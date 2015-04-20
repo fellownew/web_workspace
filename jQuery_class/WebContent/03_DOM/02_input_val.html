@@ -29,6 +29,16 @@
 			
 			var cnt = $("input[name='hobby']:checked").length;
 			alert("체크된 개수 :"+cnt);
+			
+			var chk = $("input[name='hobby']");
+			for(var idx=0;idx<chk.length;idx++){
+				alert(chk.get(idx).value+"-"+chk.get(idx).checked);
+			}
+			$("input[name='hobby']").each(function(no){
+				alert(this.value+"-"+"this.checked");
+			});
+			
+			
 		});
 	});
 

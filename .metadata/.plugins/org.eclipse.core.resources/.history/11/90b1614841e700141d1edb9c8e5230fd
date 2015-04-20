@@ -1,0 +1,32 @@
+package account.model.service;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import account.model.dao.AccountDAO;
+import common.util.DataBaseUtil;
+import common.vo.Account;
+
+public class AccountService {
+	private static AccountService inst = new AccountService();
+	private DataBaseUtil dbUtil = DataBaseUtil.getInstance();
+	private AccountDAO dao = AccountDAO.getInstance();
+	
+	public static AccountService getInstance(){
+		return inst;
+	}
+	
+	//id가 가지고 있는 통장 리스트를 리턴.
+	public ArrayList<Account> accountListById(String id){
+		Connection conn = null;
+		try{
+		conn = dbUtil.getConnection();
+		conn.setAutoCommit(false);
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		ArrayList<Account> list = new ArrayList<Account>();
+		return list;
+	}
+}

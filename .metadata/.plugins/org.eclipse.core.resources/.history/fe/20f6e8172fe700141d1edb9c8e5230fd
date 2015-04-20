@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+.desc, #tb tbody{
+	cursor: pointer;
+}
+</style>
+<script type="text/javascript" src="/jQuery_class/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//모든 div -> div들의 자손요소중 a
+	//$("div").find("a").css("color", "green");
+	//모든 div -> 자식노드
+	$("div").children("a").css("color", "pink");
+	$(".desc").on("click", function(){
+		$(this).next().text($(this).text());//next()/prev() - element 노드만 조회
+	});
+	
+	//테이블의 각 행(첫행 제외)의 어떤 부분이든 클릭을 하면, 첫번째 td의 값(no값)을 alert으로 출력
+	//클릭된 행의 배경색을 (핑크색) 변경
+	
+	$("#tb").find("tbody").find("tr").on("click",function(){
+		//$(this).parent().find("tr").css("background-color","white");
+		//$("#tb").find("tbody").find("tr").css("background-color","white");
+		$("#tb tbody tr").css("background-color","white");
+		alert($(this).css("background-color","#FFEBFE").find("td").first().text());
+		alert($(this)..parent().find("tr").css("background-color","white").end().css("background-color","#FFEBFE").find("td").first().text());
+	});
+	
+});
+
+
+
+
+</script>
+
+</head>
+<body>
+<div id="cafe">
+카페:
+	<p>
+		<span>커피프랜차이즈</span> 
+		<a href="#">스타벅스</a>
+		<a href="#">커피빈</a>
+		<a href="#">커피베네</a>
+		<a href="#">java카페</a>
+	</p>	
+</div>
+<br>
+<div>
+	포탈 : 
+	<a href="#">구글</a>
+	<a href="#">다음</a>
+	<a href="#">네이트</a>
+	<a href="#">네이버</a>
+</div>
+<hr/>
+<p id="descLayer">
+	<span class="desc">설명 1</span>11<span></span><br>
+	<span class="desc">설명 2</span><span></span><br>
+	<span class="desc">설명 3</span><span></span><br>
+	<span class="desc">설명 4</span><span></span><br>
+</p>
+<hr>
+
+<table border='1' id="tb" width="350px">
+	<thead>
+		<tr>
+			<td>no</td>
+			<td>제목</td>
+			<td>작성자</td>
+			<td>조회수</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>1번글입니다.</td>
+			<td>유재석</td>
+			<td>20</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>2번글입니다.</td>
+			<td>박명수</td>
+			<td>50</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>3번글입니다</td>
+			<td>정준하</td>
+			<td>70</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>4번글입니다.</td>
+			<td>길</td>
+			<td>30</td>
+		</tr>
+	</tbody>
+</table>
+<hr>
+
+</body>
+</html>
+
+
