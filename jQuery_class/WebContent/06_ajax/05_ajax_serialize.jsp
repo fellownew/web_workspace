@@ -4,7 +4,15 @@
 <head>
 <meta charset="UTF-8">
 <title>jQuery</title>
-
+<script type="text/javascript" src="/jQuery_class/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#btn").on("click",function(){
+			var txt = $("form:first").serialize();
+			alert(txt);
+		});
+	});
+</script>
 </head>
 <body>    
 

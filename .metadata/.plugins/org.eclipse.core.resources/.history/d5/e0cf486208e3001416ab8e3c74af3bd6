@@ -1,9 +1,0 @@
-package json.vo;
-
-public class Member {
-	private String id;
-	private String name;
-	private int age;
-	private double weight;
-	private boolean marriage;
-}

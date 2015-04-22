@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="/jQuery_class/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// $.getJSON("호출할 URL",[요청파라미터],callback함수)
+		
+		$("#btn").on("click",function(){});
+		
+	});
+
+
+
+</script>
+</head>
+<body>
+	<input type="button" value="클릭1" id="btn">
+	<div id="first"></div>
+</body>
+</html>

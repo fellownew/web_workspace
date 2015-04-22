@@ -1,9 +1,32 @@
+<!-- 
+	서버에서 전송된 응답데이터를 셀렉터를 이용해 바로 특정 노드에 붙일 경우 : load()
+	서버에서 전송된 응답데이터를 callback 함수에서 처리할 경우
+	 - getJSON() : 응답데이터가 json 문자열
+	 - get() : get 방식 요청시
+	 - post() : post 방식 요청시
+ -->
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 
 <title>Insert title here</title>
+<script type="text/javascript" src="/jQuery_class/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#getBtn").on("click",function(){
+			$.get("/jQuery_class/jQueryCtr",{"command":"getData"},callback);
+		});
+		$("#postBtn").on("click",function(){
+			$.get("/jQuery_class/jQueryCtr",{"command":"getData"},callback);
+		});
+		function callback(txt){
+			$("#showLayer").html(txt);
+		}
+		
+	});
+</script>
 </head>
 <body>
 <input type="button" value="Get요청" id="getBtn">

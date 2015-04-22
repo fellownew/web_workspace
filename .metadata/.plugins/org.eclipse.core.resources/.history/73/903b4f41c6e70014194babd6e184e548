@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="/jQuery_class/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// $.getJSON("호출할 URL",[요청파라미터],callback함수)
+		/*
+			callback함수 매개변수
+			1. 응답데이터 - javascript객체
+			2. 응답메시지 = success//callback함수는 정상응답을 받은 경우(status=200)에만 호출됨.
+			3. jqXHR = XMLHttpRequest
+		*/
+		$("#btn").on("click",function(obj){
+			$.getJSON("/jQuery_class/jQueryCtr",{"command":"getMemberByIdJson","id":"myid"},function(){
+				var txt = obj.id+"<br>"+obj.name+"<br>"+obj.age;
+				$("#first").html(txt);
+			})
+		});
+		
+	});
+
+
+
+</script>
+</head>
+<body>
+	<input type="text" id="id">
+	<input type="button" value="클릭1" id="btn">
+	<div id="first"></div>
+</body>
+</html>

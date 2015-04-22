@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;category_jquery_template&apos; to &apos;category_jquery&apos;" description="Rename resource &apos;category_jquery_template&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/category_jquery_template" name="category_jquery" stamp="1429595755659" updateReferences="true"/>
+</session>

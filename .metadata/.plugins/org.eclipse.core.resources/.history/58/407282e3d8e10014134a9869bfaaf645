@@ -1,7 +1,0 @@
-package account.model.dao;
-
-public class TypeDAO {
-	private static TypeDAO inst = new TypeDAO();
-	
-	
-}
